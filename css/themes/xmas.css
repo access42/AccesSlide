@@ -1,0 +1,630 @@
+/*
+Index
+======
+1. GENERIC STYLE
+	1.1 TABLE
+2. TYPO
+	2.1 HEADINGS
+	2.2 TEXT
+3. HEADER
+4. VOLET
+5. TOOLBAR
+	5.1 NAVIGATION ELEMENTS
+	5.2 RELATED LINKS
+6. PAGINATION SLIDE LINEAR LAYOUT
+7. SLIDES
+	7.1 COLUMN
+	7.2 FREAKY DISC
+8. TOOL BLOCK (SUMMARY & CONFIG)
+	8.1 TOOLS ELEMENTS
+9. CSS TRANSITIONS
+*/
+
+@font-face {
+	font-family: 'os-bold';
+	src: url('../fonts/opensans-bold-webfont.eot');
+	src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-bold-webfont.woff') format('woff'),
+         url('../fonts/opensans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'os-regular';
+	src: url('../fonts/opensans-regular-webfont.eot');
+	src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff'),
+         url('../fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'os-light';
+	src: url('../fonts/opensans-light-webfont.eot');
+	src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-light-webfont.woff') format('woff'),
+         url('../fonts/opensans-light-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../fonts/fontawesome-webfont.eot?v=4.3.0');
+	src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), 
+  			url('../fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),
+  			url('../fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'),
+  			url('../fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),
+  			url('../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/**
+ * -------------------------
+ * @section 1. GENERIC STYLE
+ * -------------------------
+ */
+
+body {
+	background-color: #fff;
+	color: #666;
+	font-family: 'os-light';
+}
+
+a,
+a:hover,
+a:focus,
+button,
+button:hover,
+button:focus,
+input,
+input:hover,
+input:focus {
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+a {
+	color: #666;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+a:focus,
+select:focus,
+button:focus {
+	outline: 2px solid yellow;
+}
+
+button {
+	background: none;
+	border: none;
+}
+
+.slide button {
+	border: 1px solid #F9F9F9;
+	border-radius: 3px;
+	font-size: 90%;
+	margin-bottom: 2px;
+}
+
+.slide button:hover {
+	border: 1px solid #B40000;
+	background: #F9F9F9;
+}
+
+figcaption {
+	font-size: 0.8em;
+}
+
+code,
+kbd {
+	position: relative;
+	top: -2px;
+	padding: 1px 3px;
+	border: 1px solid #006700;
+	background: #F9F9F9;
+	font-size: 70%;
+	font-size: 2.5vh;
+	line-height: 1em;
+	white-space: nowrap;
+	border-radius: 2px;
+}
+
+h3 code,
+h3 kbd {
+	background: inherit;
+}
+
+pre code {
+	border: 0;
+	font-size: 80%;
+	font-size: 2.5vh;
+	white-space: pre-wrap;
+}
+
+.hljs {
+	padding: 10px;
+}
+
+strong {
+	font-family: 'os-regular';
+}
+
+.slide img {
+	box-shadow: 0 0 3px #666;
+	border: 3px solid #fff;
+}
+
+.icon {
+	color: #B40000;
+}
+
+/** @subsection 1.1 TABLE **/
+
+table {
+	width: auto;
+	min-width: 70%;
+	margin: auto;
+}
+
+caption {
+	padding: 5px;
+	font-size: 70%;
+	font-weight: bold;
+	text-align: left;
+	color: #fff;
+	background: #006700;
+}
+
+thead {
+	border-bottom: 1px solid #666;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #F9F9F9;
+}
+
+th {
+	padding: 10px;
+	font-weight: bold;
+	text-align: center;
+	color: #B40000;
+}
+
+td {
+	padding: 10px;
+	text-align: center;
+}
+
+/**
+ * -------------------------
+ * @section 2. TYPO
+ * -------------------------
+ */
+
+/** @subsection 2.1 HEADINGS **/
+
+h2 {
+	margin-bottom: 0;
+	padding: 0.1em 1em 0.3em 1em;
+	border-left: 5px solid #B40000;
+	font-size: 160%;
+	font-size: 4vh;
+	-webkit-font-feature-settings: "c2sc";
+	-moz-font-feature-settings: "c2sc";
+	font-feature-settings: "c2sc";
+	font-variant: small-caps;
+	line-height: 1.1em;
+	background: #F9F9F9;
+	font-family: 'os-bold';
+}
+
+.couv h2,
+.end h2 {
+	float: none;
+	border-left: 0;
+	text-align: center;
+	font-size: 200%;
+	font-size: 8vh;
+	background: transparent;
+}
+
+h3 {
+	padding: 0 5px 5px 5px;
+	margin: 0;
+	border-top: 2px solid #B40000;
+	background: #666;
+	color: #fff;
+	font-size: 95%;
+	font-size: 3.5vh;
+	-webkit-font-feature-settings: "c2sc";
+	-moz-font-feature-settings: "c2sc";
+	font-feature-settings: "c2sc";
+	font-variant: small-caps;
+	font-weight: normal;
+	font-family: 'os-regular';
+}
+
+h4 {
+	margin: 0.3em;
+	font-size: 90%;
+	font-size: 3.1vh;
+}
+
+h5 {
+	margin: 0.3em;
+	font-size: 85%;
+	font-size: 2.9vh;
+}
+
+h6 {
+	margin: 0.3em;
+	font-size: 80%;
+	font-size: 2.8vh;
+}
+
+/** @subsection 2.2 TEXT **/
+
+.slide p,
+.slide ul,
+.slide ol,
+.slide blockquote {
+	margin: 0.2em 0 0.5em 0;
+	font-size: 130%;
+	font-size: 3.3vh;
+	line-height: 150%;
+}
+
+.slide ul ul,
+.slide ul ol {
+	font-size: 100%;
+	line-height: 100%;
+}
+
+.slide .small {
+	font-size: 0.8em;
+	font-weight: normal;
+}
+
+.slide .small * {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+#wrapper {
+	font-size: 3vh;
+}
+
+/**
+ * -------------------------
+ * @section 3. HEADER
+ * -------------------------
+ */
+
+.main-header h1 {
+	font-size: 3vh;
+	color: #666;
+	font-weight: normal;
+}
+
+.modeplan .main-header {
+	background: #fff;
+	box-shadow: 0 2px 3px #bbb;
+}
+
+/**
+ * -------------------------
+ * @section 4. VOLET
+ * -------------------------
+ */
+
+#volet {
+	background: #fff;
+}
+
+/**
+ * -------------------------
+ * @section 5. TOOLBAR
+ * -------------------------
+ */
+
+.tool-bar {
+	background: #fff;
+}
+
+.modeplan .tool-bar {
+	box-shadow: 0 -2px 3px #bbb;
+	background: #fff;
+}
+
+/** @subsection 5.1 NAVIGATION ELEMENTS **/
+
+.select-goto {
+	color: #666;
+	border: none;
+}
+
+.slide-counter-current {
+	background-color: #fff;
+	color: #666;
+	border: 1px solid #B40000;
+}
+
+.slide-counter-total {
+	background-color: #B40000;
+	color: #fff;
+	border: 1px solid transparent;
+}
+
+.btn:hover .icon {
+	opacity: 0.5;
+}
+
+.btn[disabled="disabled"]:hover {
+	opacity: 1;
+	cursor: default;
+}
+
+/** @subsection 5.2 RELATED LINKS **/
+
+.related a {
+	padding: 2px 3px;
+	font-size: 70%;
+	border: 1px solid #666;
+	border-radius: 3px;
+	text-decoration: none;
+}
+
+.related a img {
+	position: related;
+	margin-top: -4px;
+}
+
+.related a:hover {
+	background: #F9F9F9;
+	border: 1px solid #aaa;
+}
+
+/**
+ * -------------------------
+ * @section 6. PAGINATION SLIDE LINEAR LAYOUT
+ * -------------------------
+ */
+
+.index {
+	padding-top: 15px;
+	border-radius: 0;
+}
+
+.index span {
+	padding: 0;
+	color: #fff;
+	background-color: #B40000;
+}
+
+/**
+ * -------------------------
+ * @section 7. SLIDES
+ * -------------------------
+ */
+
+.modeplan .slide {
+	border-bottom: 2px solid #B40000;
+	padding-top: 1em;
+}
+
+.couv,
+.end {
+	text-align: center;
+	color: #666;
+}
+
+.credit {
+	padding: 0;
+}
+
+.credit li {
+	display: inline-block;
+}
+
+.credit a {
+	padding: 2px 3px;
+	border: 1px solid #F9F9F9;
+	border-radius: 3px;
+	text-decoration: none;
+}
+
+.credit a:hover,
+.credit a:focus {
+	color: #fff;
+	background: #B40000;
+	border: 1px solid #666;
+}
+
+/** @subsection 7.1 COLUMN **/
+
+/** @subsection 7.2 FREAKY DISC **/
+
+.list-disc {
+	padding: 0;
+}
+
+.list-disc li {
+	list-style: none;
+}
+
+button.disc {
+	display: block;
+	width: 100%;
+	border: none;
+	padding-top: 85px;
+}
+
+button.disc1 {
+	background: transparent url("../img/disc_1_gray.png") center top no-repeat;
+}
+
+button.disc1:hover,
+button.disc1:focus {
+	background: transparent url("../img/disc_1.png") center top no-repeat;
+}
+
+/**
+ * -------------------------
+ * @section 8. TOOL BLOCK (SUMMARY & CONFIG)
+ * -------------------------
+ */
+
+.tool-block {
+	background-color: #F9F9F9;
+	color: #666;
+	box-shadow: 0 0 10px #000;
+}
+
+.tool-block-title {
+	padding-top: 5px;
+	font-size: 1.2em;
+	text-align: center;
+	border-bottom: 1px dashed #666;
+	text-transform: uppercase;
+}
+
+.tool-block li,
+.tool-block label,
+.tool-block select {
+	font-size: 0.75em;
+}
+
+/** @subsection 8.1 TOOLS ELEMENTS **/
+
+.tool-block-settings fieldset {
+	border: none;
+}
+
+.tool-block-settings legend {
+	font-size: 1.5em;
+	-webkit-font-feature-settings: "c2sc";
+	-moz-font-feature-settings: "c2sc";
+	font-feature-settings: "c2sc";
+	font-variant: small-caps;
+}
+
+.help {
+	border: 1px solid #B40000;
+	border-radius: 5px;
+	background: #F9F9F9;
+}
+
+.tool-block button:hover,
+.tool-block button:focus {
+	color: #666;
+}
+
+.btn-setting { /* Save & Default button*/
+	background: #B40000;
+	border: 1px solid  #666;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.btn-setting:hover,
+.btn-setting:focus {
+	background: #006700;
+}
+
+/**
+ * -------------------------
+ * @section 9. CSS TRANSITIONS
+ * -------------------------
+ */
+
+#volet.Flash {
+	background: #B40000;
+}
+
+@media screen and (min-width: 48em) {
+
+h2 {
+	float: left;
+	margin-bottom: 1em;
+}
+
+h2 + * {
+	clear: both;
+}
+
+h3 {
+	float: left;
+	margin-bottom: 1em;
+}
+
+h3 + * {
+	clear: both;
+}
+
+.col-left {
+	float: left;
+	width: 50%;
+	padding: 0 5% 0 0;
+}
+
+.col-right {
+	float: right;
+	width: 50%;
+	padding: 0 0 0 5%;
+}
+
+.list-disc li {
+	float: left;
+	width: 25%;
+}
+
+}
+
+@media screen and (max-width: 48em) and (min-width:24em) {
+
+.list-disc li {
+	float: left;
+	width: 50%;
+}
+
+}
+
+@media screen and (max-width: 48em) {
+
+.main-header h1 {
+	font-size: 80%;
+}
+
+.main-header {
+	background: #fff;
+	padding: 5px;
+	box-shadow: 0 2px 3px #bbb;
+}
+
+.tool-bar {
+	box-shadow: 0 -2px 3px #bbb;
+}
+
+.related {
+	background: #fff;
+	border: 3px solid #F9F9F9;
+	border-left: 0;
+	border-bottom: 0;
+}
+
+}
+

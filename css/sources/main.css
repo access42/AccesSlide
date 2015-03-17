@@ -1,0 +1,754 @@
+/**
+ * AccessSlide
+ * 
+ * Main layout stylesheet
+ * 
+ * @project AccessSlide
+ * @version 1.0
+ * @author Access42
+ * @copyright Access42
+ * @license GPL
+ */
+
+/*
+Index
+======
+1. GENERIC STYLE
+2. MAIN LAYOUT
+	2.1 HEADER
+	2.2 WRAPPER
+	2.3 VOLET
+3. TOOLBAR
+	3.1 NAVIGATION BLOCK
+	3.2 NAVIGATION ELEMENTS
+	3.3 RELATED LINKS
+4. SLIDES
+5. PAGINATION SLIDE LINEAR LAYOUT
+6. TOOL BLOCK (SUMMARY & CONFIG)
+	6.1 TOOLS ELEMENTS
+*/
+
+/*
+LAYOUT
+======
++	body
+	+	#screen
+		-	#banner [.main-header]
+		+	#nav [.tool-bar]
+			+	#wrappernav	
+				- .related
+				- #navbar
+		-	.tool-summary [.tool-block]
+		+	#wrapper
+			-	#volet
+			+	main
+				- .slide
+		-	.tool-settings [.tool-block ]
+*/
+
+/**
+ * -------------------------
+ * @section 1. GENERIC STYLE
+ * -------------------------
+ */
+
+*{
+	box-sizing:border-box;
+}
+
+html{
+	height:100%;
+	font-family:helvetica,sans-serif;
+}
+
+body{
+	height:100%!important;
+	margin:0;
+	padding:0;
+	text-align:left;
+	overflow-x:hidden;
+}
+
+input,
+select,
+button{
+	cursor:pointer;
+}
+
+input[disabled="disabled"],
+select[disabled="disabled"],
+button[disabled="disabled"]{
+	cursor:default;
+}
+
+figure{
+	margin:0;
+	text-align:center;
+}
+
+.slide img{
+	max-width:100%;
+	max-height:50vh;
+	margin:auto;
+	margin-bottom:10px;
+}
+
+img.center{
+	display:block;
+}
+
+.center{
+	text-align:center;
+}
+
+.clear{
+	clear:both;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.slide h2:first-of-type{
+	margin-top:0;
+}
+
+.btn-github{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:950;
+}
+
+	@media (--small){
+		.btn-github{
+			display:none;
+		}
+	}
+
+#Caudio{
+	display:none;
+}
+
+.icon{
+	display:none;
+}
+
+	.fontawesome .icon{
+		display:inline-block;
+	}
+
+	.fontawesome .icon:before{
+		display: inline-block;
+		font: normal normal normal 1em/1 FontAwesome;
+		font-size: inherit;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		transform: translate(0, 0);
+	}
+
+	.fontawesome .text{
+		position:absolute;
+		width:0;
+		height:0;
+		overflow:hidden;
+	}
+
+	.fontawesome a[href*="twitter.com"] .icon:before{
+		content: "\f099";
+	}
+
+	.fontawesome a[href*="github.com"] .icon:before{
+		content: "\f09b";
+	}
+
+.is-hidden{
+	display:none;
+}
+
+.sr{
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	position: absolute;
+	height: 1px;
+	width: 1px;
+}
+
+/**
+ * -------------------------
+ * @section 2. MAIN LAYOUT
+ * -------------------------
+ */
+
+#Dcourante{
+	position:absolute;
+	top:-10000000000px;
+}
+	
+@media (--medium) {
+	 #screen{
+		position:relative;
+		height:100%;
+		margin:0 auto ;
+		z-index:0;
+		overflow-y:hidden;
+	}
+}
+
+@media (--small) {
+	 #screen{
+		margin:0;
+		overflow:auto;
+	}
+}
+
+	#screen.modeplan,
+	#screen.fullscreen{
+		width:100%;
+		margin:0 auto;
+	}
+
+/** @subsection 2.1 HEADER **/
+ 
+.main-header{
+	position:relative;
+	z-index:900;
+	left:0;
+}
+
+	@media (--medium){
+		.main-header{
+			margin:0 0 5px 0;
+			padding:0 12%;
+		}
+	}
+
+	@media (--small){
+		.main-header{
+			position:fixed;
+			top:0;
+			width:100%;
+		}
+	}
+
+	.modeplan .main-header,
+	.fullscreen .main-header{
+		width:100%;
+		z-index:1;
+		top:0;
+	}
+
+	.modeplan .main-header{
+		position:fixed;
+	}
+
+	.fullscreen .main-header{
+		position:relative;
+	}
+
+.main-header.masque{
+	left:-100000000px;
+}
+
+	.modeplan .main-header.masque{
+		left:0;
+	}
+
+@media (--small){
+	.main-header h1{
+		padding:2px 0;
+		margin:0;
+	}
+}
+
+.main-header h1{
+	float:right;
+}
+
+.main-logo{
+	float:left;
+}
+
+	@media (--small){
+		.main-logo{
+			position:relative;	
+			width:70px;
+			height:auto;
+			display:block;
+			margin:auto;
+		}
+	}
+
+/** @subsection 2.2 WRAPPER **/
+
+#wrapper{
+	position:relative;
+	height:80%;
+	max-height:100%;
+	overflow-y:auto;
+}
+
+	@media (--small){
+		#wrapper{
+			padding-bottom:80px;
+		}
+	}
+
+	@media (--medium){
+		#wrapper{
+			padding:0 0.3em 0.3em 0.3em;
+		}
+	}
+
+	.modeplan #wrapper{
+		width:100%;
+		height:auto;
+		max-height:auto;
+		padding-top:53px;
+	}
+
+/* @subsection 2.3 VOLET */
+
+#volet{
+	width:100%;
+	position: absolute;
+	overflow:hidden;
+	z-index:1;
+	display:none;
+}
+
+	.modeplan #volet{
+		width:0;
+	}
+
+/**
+ * -------------------------
+ * @section 3. TOOLBAR
+ * -------------------------
+ */
+
+.tool-bar{
+	position:absolute;
+	z-index:3;
+	bottom:0
+}
+
+	.modeplan .tool-bar{
+		position:fixed;
+	}
+
+	@media (--small) {
+		.tool-bar{
+			position:fixed;
+		}
+	}	
+
+	.modeplan .tool-bar{
+		padding-top:10px;
+	}
+
+	@media (--small) {
+		.tool-bar{
+			bottom:0;
+			width:100%;
+		}
+	}	
+
+	@media (--medium) {
+		.tool-bar{
+			width:100%;
+			min-height:40px;
+			bottom:0px;
+		}
+	}
+
+	@media (--medium) {
+		#wrappernav{
+			margin:auto;
+			padding:0 12%;
+		}
+	}
+
+/** @subsection 3.1 NAVIGATION BLOCK**/	
+
+#navbar{
+	padding:0;
+	margin:5px 0 0 0;
+}
+
+	@media (--medium) {
+		#navbar{
+			float:right;
+			margin-right:-10px;
+		}
+	}
+
+	@media (--small) {
+		#navbar{
+			height:1.2em;
+		}
+	}
+
+	.modeplan #navbar{
+		margin-top:0;
+		margin-right:2px;
+
+	}
+
+	@media (--small) {
+		.modeplan #navbar{
+			height:1.6em;
+		}
+	}
+	
+/** @subsection 3.2 NAVIGATION ELEMENTS**/	
+
+#navbar li{
+	float:left;
+	margin:0;
+	list-style:none;
+}
+
+.tool-bar-elt{
+	height:2.8em;
+	overflow:hidden;
+}
+
+.btn{
+	padding:10px;
+}
+
+	.fontawesome .icon-settings:before {
+		content: "\f085";
+		font-size:110%;
+	}
+
+	.fontawesome .icon-summary:before {
+		content: "\f03a";
+		font-size:110%;
+	}
+	
+	.fontawesome .icon-next:before {
+	  content: "\f0da";
+	  font-size:180%;
+	  line-height:80%;
+	}	
+	
+	.fontawesome .icon-prev:before {
+	  content: "\f0d9";
+	  font-size:180%;
+	  line-height:80%;
+	}
+	
+	@media (--small){
+		
+		.btn-block-settings{
+			right:0;
+		}
+		
+		.btn-block-summary{
+			right:2em;
+		}	
+	
+	}
+	
+	.modeplan .mp-none{
+		display:none;
+	}
+
+	/* Page select */
+	.select-goto{ 
+		float:left;
+		font-size:85%;
+		margin-top:12px
+	}
+
+	.fontawesome .icon-goto:before {
+	  content: "\f050";
+	  line-height:0;
+	}
+		
+	/* Slide counter */
+	.slide-counter{
+		position:relative;
+		font-weight:bold;
+		top:12px;
+	}
+	
+	.slide-counter span{
+		float:left;
+		margin:0;
+		text-align:center;
+		min-width:30px;
+		padding:2px 5px 0 5px;
+		height:1.6em;
+		line-height:1.1em;
+		font-size:0.7em
+	}
+
+/** @subsection 3.3 RELATED LINKS**/	
+
+.related{
+	float:left;
+	padding:0;
+}
+
+	.related li{
+		display:inline;
+	}
+
+		.related img{
+			vertical-align:middle;
+		}
+
+@media (--medium) {
+	.related{
+		margin-top:12px
+	}
+}
+
+@media (--small) {
+	/** TOGGLE RELATED LINKS**/	
+	#toggle-nav{
+		float:left;
+		margin-top:10px;
+	}
+	
+	.related{
+		position:absolute;
+		bottom:36px;
+		padding:10px;
+	}
+	
+	.related li{
+		display:block;
+		margin-bottom:5px;
+	}
+
+	.related li a{
+		display:block;
+		width:100%;
+	}		
+	.is-closed .related{
+		display:none;
+	}
+}
+
+	.fontawesome .icon-plus:before {
+		content: "\f0fe";
+		font-size:125%;
+	}
+
+/**
+ * -------------------------
+ * @section 4. SLIDES
+ * -------------------------
+ */
+
+.slide{
+	position:relative;
+	opacity:0;
+	overflow:auto;
+	padding:0 12%;
+	top:15vh;
+}
+	
+	@media (--small) {
+		.slide{
+			padding:0.5em;
+			hyphens: auto;
+			top:10vh;
+		}
+	}
+	
+	.modeplan .slide{
+		opacity:1;
+		position:relative;
+		min-height:20em;
+		z-index:0;
+		font-size:100%;
+	}
+
+	.modeplan .Cagauche .slide{
+		width:75%;
+	}
+
+	.modeplan .couv{/* first slide*/
+		margin-top:0;
+	}
+	
+	/* last slide*/
+	@media (--medium){
+		.end{	
+			padding-top:80px;
+		}
+	}
+
+	.modeplan .end{
+		margin-bottom:50px;
+	}	
+	
+/**
+ * -------------------------
+ * @section 5. PAGINATION SLIDE LINEAR LAYOUT
+ * -------------------------
+ */
+
+	.index{/** pagination only visible when linear layout (modeplan) is active **/
+		position:absolute;
+		top:-13px;
+		right:0;
+	}
+		.index span{
+			display:block;
+			width:5em;
+			text-align:center;
+			font-size:65%;
+			font-weight:normal;
+			padding-top:3px;
+		}
+
+/**
+ * -------------------------
+ * @section 6. TOOL BLOCK (SUMMARY & CONFIG)
+ * -------------------------
+ */
+
+.tool-block{
+	display:none;
+	position:absolute;
+	width:300px;
+	height:85%;
+	padding-bottom:25px;
+	z-index:1200;
+	top:10%;
+	right:0;
+	padding-top:1em;
+	overflow-x: hidden;
+}
+
+	@media (--small) {
+	
+		.tool-block{
+			min-height:100%;
+			left:0;
+			top:0;
+		}
+		
+		.tool-block-summary{
+			top:0!important;
+		}	
+		
+	}
+
+/** @subsection 6.1 TOOLS ELEMENTS **/	
+	
+.tool-block-title{
+	margin-top:0;
+	padding-bottom:0.3em;
+}
+	
+.tool-block-settings fieldset{
+	font-size:3vh;
+}
+
+.input-setting,
+.label-setting{
+	display:inline-block;
+}
+
+.input-setting{
+	position:relative;
+	top:2px;
+}
+
+.label-setting{
+	line-height:1.8em;
+}
+
+	.tool-block-settings .icon:before{
+		margin:0 6px;
+	}
+	
+	.icon-setting-sound:before{
+		content: "\f028";
+	}
+	
+	.icon-setting-next:before{
+		content: "\f0da";
+	}
+	
+	.icon-setting-mouse:before{
+		content: "\f0a6";
+	}
+	
+	.icon-setting-summary:before{
+		content: "\f03a";
+	}
+
+	.icon-setting-anim:before{
+		content: "\f0d0";
+	}
+
+	.icon-setting-plan:before{
+		content: "\f0db";
+	}
+	
+#effects,
+#effects option {
+	font-size:100%;
+}	
+
+	.help{
+		display:none;
+	}
+
+		.input-setting:hover + .help,
+		.input-setting:focus + .help{
+			display:block;
+			position:absolute;
+			max-width:20em;
+			margin-top:0;
+			margin-left:20px;
+			font-size:80%;
+			padding:3px;
+			z-index:900
+		}
+	
+.tool-block-summary button{
+	text-align:left;
+}
+
+.btn-group-settings{/* Save & Default button**/
+	padding:2em 0;
+	text-align:center;
+}
+
+	.btn-setting{
+		padding:0.3em;
+		margin-right:3px;
+	}
+	
+.btn-close{
+	position:absolute;
+	top:3px;
+	right:3px;
+	width:23px;
+	height:23px;
+	border:none;
+}
+
+.btn-close .icon:before{
+  content: "\f00d";
+}
+
+	.btn-close:hover .icon,
+	.btn-close:focus .icon{
+		opacity:0.5;
+	}

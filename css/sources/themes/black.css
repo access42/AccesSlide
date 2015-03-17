@@ -1,0 +1,605 @@
+/*
+Index
+======
+1. GENERIC STYLE
+	1.1 TABLE
+2. TYPO
+	2.1 HEADINGS
+	2.2 TEXT
+3. HEADER
+4. VOLET
+5. TOOLBAR
+	5.1 NAVIGATION ELEMENTS
+	5.2 RELATED LINKS
+6. PAGINATION SLIDE LINEAR LAYOUT
+7. SLIDES
+	7.1 COLUMN
+	7.2 FREAKY DISC
+8. TOOL BLOCK (SUMMARY & CONFIG)
+	8.1 TOOLS ELEMENTS
+9. CSS TRANSITIONS
+*/
+
+@import url('../breakpoint.css');
+@import url('../fonts.css');
+
+/*
+1.	Generic style
+======
+*/
+
+:root{
+	--font:#fff;
+	--font-alt:#000;
+	--main-bg:#333;
+	--backg:#fff;
+	--backg-alt:#ddd;
+	--theme:orange;
+	
+}
+
+body{
+	background-color:var(--main-bg);
+	color:var(--font);
+	font-family:'os-light';
+}
+
+a,
+a:hover,
+a:focus,
+button,
+button:hover,
+button:focus,
+input,
+input:hover,
+input:focus{
+	transition:all 0.5s ease;
+}
+
+a{
+	color:var(--font);
+}
+
+a:hover,
+a:focus{
+	text-decoration:none;
+}
+
+a:focus,
+select:focus,
+button:focus{
+	outline:2px solid yellow;
+}
+
+button{
+	background:none;
+	border:none;
+}
+
+.slide button{
+	border:1px solid var(--backg-alt);
+	border-radius:3px;
+	font-size:90%;
+	margin-bottom:2px;
+}
+
+	.slide button:hover{
+		border:1px solid var(--theme);
+		background:var(--backg-alt);
+		color:var(--font-alt);
+	}
+
+figcaption{
+	font-size:0.8em;
+}
+
+
+strong{
+	font-family:'os-regular';
+}
+
+
+blockquote{
+	font-style:italic;
+}
+
+q{
+	font-style:italic;
+	quotes: "« " " »";
+}
+
+blockquote q{
+	font-style:normal;
+}
+
+
+
+code,
+kbd{
+	position:relative;
+	top:-2px;
+	padding:1px 3px;
+	border:1px solid var(--backg);
+	background:var(--backg-alt);
+	color:var(--font-alt);
+	font-size:70%;
+	font-size:2.5vh;
+	line-height:1em;
+	white-space: nowrap;
+	border-radius:2px;
+}
+
+h3 code,
+h3 kbd{
+	background:inherit;
+}
+
+pre code{
+	border:0;
+	font-size:80%;
+	font-size:2.5vh;
+	white-space: pre-wrap;
+}
+
+.hljs{
+	padding:10px;
+}
+
+
+.slide img{
+	box-shadow:0 0 3px var(--backg);
+	border:3px solid var(--main-bg);
+}
+
+
+/** @subsection 1.1 TABLE **/
+table{
+	width:auto;
+	min-width:70%;
+	margin:auto;
+}
+
+	caption{
+	padding:5px;
+	color:var(--font-alt);
+	font-size:70%;
+	font-weight:bold;
+	text-align:left;
+	background:var(--theme);
+}
+	
+	thead{
+		border-bottom:1px solid var(--backg);
+	}
+
+	tbody tr:nth-child(even){
+		background-color:var(--backg-alt);
+		color:var(--font-alt);
+	}
+	
+	th{
+		padding:10px;
+		color:var(--theme);
+		font-weight:bold;
+		text-align:center;
+	}
+
+	td{
+		padding:10px;
+		text-align:center;
+	}
+
+/**
+ * -------------------------
+ * @section 2. TYPO
+ * -------------------------
+ */
+ 
+/** @subsection 2.1 HEADINGS **/
+
+h2{
+	margin-bottom:0;
+	padding:0.1em 1em 0.3em 1em;
+	border-left:5px solid var(--theme);
+	color:var(--font-alt);
+	font-size:160%;
+	font-size:4vh;
+	font-variant:small-caps;
+	line-height:1.1em;
+	font-family:'os-bold';
+	background:var(--backg-alt);
+}
+
+	@media (--medium){
+		h2{
+			float:left;
+			margin-bottom:1em;
+		}
+		h2 + *{
+			clear:both;
+		}
+	}
+
+	.couv h2,.end h2{
+		float:none;
+		border-left:0;
+		color:var(--font);
+		text-align:center;	
+		font-size:200%;
+		font-size:8vh;
+		background:transparent;
+	}
+
+h3{
+	padding:0 5px 5px 5px;
+	margin:0;
+	border-top:2px solid var(--theme);
+	background:var(--backg);
+	color:var(--font-alt);
+	font-size:95%;
+	font-size:3.5vh;
+	font-variant:small-caps;
+	font-weight:normal;
+	font-family:'os-regular';
+}
+
+	@media (--medium){
+		h3{
+			float:left;
+			margin-bottom:1em;
+		}
+		h3 + *{
+			clear:both;
+		}
+	}
+
+h4{
+	margin:0.3em;
+	font-size:90%;
+	font-size:3.1vh;
+}
+
+h5{
+	margin:0.3em;
+	font-size:85%;
+	font-size:2.9vh;
+}
+
+h6{
+	margin:0.3em;
+	font-size:80%;
+	font-size:2.8vh;
+}
+
+/** @subsection 2.2 TEXT **/
+
+.slide p,
+.slide ul,
+.slide ol,
+.slide blockquote{
+	margin:0.2em 0 0.5em 0;
+	font-size:130%;
+	font-size:3.3vh;
+	line-height:150%;
+}
+
+.slide ul ul,
+.slide ul ol{
+	font-size:100%;
+	line-height:100%;
+}
+
+.slide .small{
+	font-size:0.8em;
+	font-weight:normal;
+}
+
+.slide .small *{
+	font-size:1em;
+	font-weight:normal;
+}
+
+#wrapper{
+	font-size:3vh;
+}
+
+/**
+ * -------------------------
+ * @section 3. HEADER
+ * -------------------------
+ */
+ 
+.main-header h1{
+	font-size:3vh;
+	color:var(--font);
+	font-weight:normal;
+}
+
+	@media (--small){
+	
+		.main-header h1{
+			font-size:80%;
+		}	
+		
+		.main-header{
+			background:var(--main-bg);
+			padding:5px;
+			box-shadow:0 2px 3px #bbb;
+		}
+		
+	}
+
+	.modeplan .main-header{
+		background:var(--main-bg);
+		box-shadow:0 2px 3px #bbb;
+	}
+
+/**
+ * -------------------------
+ * @section 4. VOLET
+ * -------------------------
+ */	
+	#volet{
+		background:var(--main-bg);
+	}
+
+/**
+ * -------------------------
+ * @section 5. TOOLBAR
+ * -------------------------
+ */	
+
+.tool-bar{
+	background:var(--main-bg);
+}
+	
+	@media (--small){
+		.tool-bar{
+			box-shadow:0 -2px 3px #bbb;
+		}
+	}
+
+	.modeplan .tool-bar{
+		box-shadow:0 -2px 3px #bbb;
+		background:var(--main-bg);
+	}
+
+/** @subsection 5.1 NAVIGATION ELEMENTS **/
+
+.select-goto{
+	color:var(--font-alt);
+	border:none;
+}
+
+.slide-counter-current{
+	background-color:var(--main-bg);
+	color:var(--font);
+	border:1px solid var(--backg);
+}
+
+.slide-counter-total{
+	background-color:var(--backg);
+	color:var(--font-alt);
+	border:1px solid transparent;
+}
+		
+.btn:hover .icon{
+	opacity:0.5;
+}
+
+	.btn[disabled="disabled"]:hover{
+		opacity:1;
+		cursor:default;
+	}
+	
+/** @subsection 5.2 RELATED LINKS **/
+
+@media (--small) {
+	.related{
+		background:var(--main-bg);
+		border:3px solid var(--backg-alt);
+		border-left:0;
+		border-bottom:0;
+	}
+}
+
+	.related a{
+		padding:2px 3px;
+		font-size:70%;
+		border:1px solid var(--backg);
+		border-radius:3px;
+		text-decoration:none;
+		
+	}
+
+	.related a img{
+		position:related;
+		margin-top:-4px;
+	}
+	
+	.related a:hover{
+		color:var(--font-alt);
+		background:var(--backg-alt);
+		border:1px solid #aaa;
+	}
+
+/**
+ * -------------------------
+ * @section 6. PAGINATION SLIDE LINEAR LAYOUT
+ * -------------------------
+ */	
+ 	
+.index{
+	padding-top:15px;
+	border-radius:0;
+}
+
+	.index span{
+		padding:0;
+		color: var(--font-alt);
+		background-color:var(--backg);
+	}
+
+/**
+ * -------------------------
+ * @section 7. SLIDES
+ * -------------------------
+ */	
+ 
+.modeplan .slide{
+	border-bottom:2px solid var(--backg);
+	padding-top:1em;
+}
+	
+	.couv,
+	.end{
+		text-align:center;
+		color:var(--font);
+	}
+
+		.credit{
+			padding:0;
+		}
+
+			.credit li {
+				display:inline-block;
+			}
+
+			.credit a{
+				padding:2px 3px;
+				border:1px solid var(--backg-alt);
+				border-radius:3px;
+				text-decoration:none;
+			}
+
+			.credit a:hover,
+			.credit a:focus{
+				background:var(--theme);
+				border:1px solid var(--backg);
+			}
+			
+/** @subsection 7.1 COLUMN **/
+
+@media (--medium) {
+	.col-left{
+		float:left;
+		width:50%;
+		padding:0 5% 0 0;
+	}
+
+	.col-right{
+		float:right;
+		width:50%;
+		padding:0 0 0 5%;
+	}
+}
+
+/** @subsection 7.2 FREAKY DISC **/
+
+.list-disc{
+	padding:0;
+}
+
+	.list-disc li{
+		list-style:none;
+	}
+	
+		@media (--bw){
+			.list-disc li{
+				float:left;
+				width:50%;
+			}
+		}
+		
+		@media (--medium){
+				.list-disc li{
+					float:left;
+					width:25%;
+				}
+			}
+
+button.disc{
+	display:block;
+	width:100%;
+	border:none;
+	padding-top:85px;
+}
+
+button.disc1{
+	background:transparent url("../img/disc_1_gray.png") center top no-repeat;
+}
+
+button.disc1:hover,
+button.disc1:focus{
+	background:transparent url("../img/disc_1.png") center top no-repeat;
+}
+
+/**
+ * -------------------------
+ * @section 8. TOOL BLOCK (SUMMARY & CONFIG)
+ * -------------------------
+ */	
+ 
+.tool-block{
+	background-color:var(--backg-alt);
+	color:var(--font-alt);
+	box-shadow:0 0 10px #000;
+}
+
+.tool-block-title{
+	padding-top:5px;
+	font-size:1.2em;
+	text-align:center;
+	border-bottom:1px dashed var(--backg);
+	text-transform:uppercase;
+}
+
+.tool-block li,
+.tool-block label,
+.tool-block select{
+	font-size:0.75em;
+}
+
+/** @subsection 8.1 TOOLS ELEMENTS **/	
+.tool-block-settings fieldset{
+	border:none;
+}
+
+	.tool-block-settings legend{
+		font-size:1.5em;
+		font-variant:small-caps;
+	}
+
+	.help{
+		color:var(--font);
+		border:1px solid var(--theme);
+		border-radius:5px;
+		background:var(--main-bg);
+	}
+
+.tool-block button:hover,
+.tool-block button:focus{
+	color:var(--font);
+}
+
+.btn-setting{/* Save & Default button*/
+	background-color:var(--theme);
+	border:1px solid  var(--backg);
+	color:var(--font-alt);
+}
+
+	.btn-setting:hover,
+	.btn-setting:focus{
+		background:var(--main-bg);
+		color:var(--font);
+	}
+
+/**
+ * -------------------------
+ * @section 9. CSS TRANSITIONS
+ * -------------------------
+ */	
+ 
+#volet.Flash{
+	background:var(--backg);
+}

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Diaporama AccesSlide - Access 42</title>
+	<meta charset="utf-8">	<!-- Layout stylesheet -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<!-- Theme stylesheet -->
+	<link rel="stylesheet" id="currentCSS" href="css/themes/default.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="AccesSlide.js"></script>
+	<script src="lang/lang_fr.js"></script>
+	<script src="highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+
+	<a href="#" class="btn-github noprint" lang="en"><img src="img_slide/forkme.png" alt="Fork me on Github"></a>
+
+	<div id="screen" class="modeplan" data-effect="Eno">
+
+		<div id="volet"></div>
+		
+		<header id="banner" role="banner" class="main-header clearfix">
+			<a href="http://www.access42.net"><img id="logo" class="main-logo" src="img_slide/logo_transparent.png" alt="Access42" /></a>
+			<h1 class="main-title">Diaporama AccessSlide - Access42</h1>
+		</header>
+	
+		<nav role="navigation" id="nav" class="tool-bar footer-nav clearfix">
+			<div id="wrappernav">
+				<ul class="related">
+					<li><a href="http://www.access42.net">www.access42.net</a></li>
+					<li><a href="https://twitter.com/access42net">
+					<span class="icon-fallback-text">
+						<span class="icon icon-twitter" aria-hidden="true"></span>
+						<img class="text" src="img/twitter.png" alt="" />
+					</span>
+						@access42net</a></li>
+					<li><a href="https://github.com/access42/" lang="en">
+					<span class="icon-fallback-text">
+						<span class="icon icon-github" aria-hidden="true"></span>
+						<img class="text" src="img/github.png" alt="" />
+					</span>
+					Github</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div id="sommaire" class="tool-block tool-block-summary" tabindex="-1"></div>
+
+		<div id="wrapper">
+		
+			<main role="main" id="main">
+	
+				<section class="slide couv">
+					<h2>AccessSlide <br /><span class="small">Enfin un diaporama accessible</span></h2>
+					<p>par <a href="http://www.access42.net">Access42</a></p>
+				</section>
+		
+				<section class="slide">
+					<h2>Structure</h2>
+					<p>Les slides s'insèrent dans l'élément <code>main</code> avec des éléments <code>section</code> associés à une classe <code>slide</code>.</p>
+					<p>La première diapositive a une classe complémentaire <code>couv</code> et la dernière, une classe <code>end</code>.</p>
+					<p>On peut imbriquer des <code>section</code> dans des <code>section</code>.</p>
+				</section>
+		
+				<section class="slide">
+					<h2>Exemple minimal de structure</h2>
+<pre><code class="html">&lt;section class="slide"&gt;
+ &lt;h2&gt;Titre du slide&lt;/h2&gt;
+ [contenu]
+&lt;/section&gt;
+
+&lt;section class="slide" aria-label="titre du slide"&gt;
+ [contenu]
+&lt;/section&gt;</code></pre>
+				</section>
+
+				<section class="slide">
+					<h2>Masquer des éléments</h2>
+					<p>Tous les éléments <code>html</code> d'un slide peuvent être masqués via la classe <code>Cmasque</code>, ils apparaitront sur l'action <q>diapo suivante</q>.
+					</p>
+					<p>Exemple : cette diapositive contient quatre éléments masqués</p>
+					<ul>
+						<li class="Cmasque">un texte masqué</li>
+						<li class="Cmasque">un second texte masqué <span class="Cmasque"> un élément masqué en ligne</span></li>
+					</ul>
+				</section>
+		
+				<section class="slide">
+					<h2>Navigation</h2>
+					<p>La barre de navigation contient successivement</p>
+					<ol>
+						<li>un bouton <kbd>précédent</kbd></li>
+						<li>une <kbd>liste de sélection</kbd> pour atteindre une diapo par son index</li>
+						<li>un bouton <kbd>suivant</kbd></li>
+						<li>un <kbd>sommaire</kbd> pour atteindre une diapo via son titre</li>
+						<li>l'index (n° de la diapo courante et total des diapos)</li>
+						<li>un bouton de <kbd>configuration</kbd></li>
+					</ol>
+				</section>
+
+				<section class="slide">
+					<h2>Navigation clavier</h2>
+					<ul>
+						<li><kbd>Espace</kbd>, <kbd>Flèche droite</kbd>, <kbd>Clic</kbd> Diapo suivante</li>
+						<li><kbd>MAJ + Espace</kbd>, <kbd>Flèche gauche</kbd> Diapo précédente</li>
+						<li><kbd>Début</kbd> Première diapo</li>
+						<li><kbd>Fin</kbd> Dernière diapo</li>
+						<li><kbd>ALT + 0 (zéro)</kbd> Sommaire</li>
+					</ul>
+					<p class="small">Pour passer à la diapo suivante avec Jaws : ignorer l'appui sur la touche suivante (<kbd>insert</kbd> + <kbd>3</kbd>) puis ensuite appuyer sur la barre <kbd>espace</kbd> pour faire défiler le diaporama.</p>
+					<p class="small">Avec NVDA, l'appui sur les touches pour ignorer la touche suivante n'est pas nécessaire, la barre d'espace fonctionne.</p>
+				</section>
+		
+				<section class="slide">
+					<h2>Effets</h2>
+					<p>Les effets disponibles se paramètrent via le panneau de configuration.</p>
+					<h3>Pour créer vos propres effets :</h3>
+					<ol>
+						<li>Créer une <code>class</code>, par exemple <code>.mon-effet</code></li>
+						<li>Dans le fichier <code>AccesSlide.js</code>, créer une entrée dans l'objet <code>config</code> ( voir les instructions dans le fichier à la section <code>Effects</code>)</li>
+						<li>Dans le fichier de langue : créer une entrée pour l'étiquette de l'effet. Attention : l'entrée dans le fichier de langue doit avoir le même nom que dans l'objet <code>config</code></li>
+					</ol>
+					<p>Le nouvel effet sera ajouté automatiquemet à la liste des effets dans le panneau de configuration</p>
+				</section>
+			
+				<section class="slide">						
+					<h2>CSS</h2>
+					<p>2 fichiers CSS sont nécessaires : </p>
+					<ul>
+						<li><code>css/style.css</code> : les propriétés générales du diaporama</li>
+						<li><code>css/themes/default.css</code> : le thème</li>
+					</ul>
+				</section>	
+
+				<section class="slide">						
+					<h2>Thèmes</h2>
+					<p>Plusieurs thèmes sont livrés avec AccessSlide dans le dossier <code>css/themes</code>.</p>
+					<ul>
+						<li><button onClick="javascript:changeColors('default');return false;">Thème par défaut</button></li>
+						<li><button onClick="javascript:changeColors('xmas');return false;">Thème de noël</button></li>
+						<li><button onClick="javascript:changeColors('black');return false;">Thème black</button></li>		
+					</ul>
+<pre>
+<code class="html">&lt;!-- Theme stylesheet --&gt;
+&lt;link rel="stylesheet" href="css/themes/default.css" type="text/css" media="all" /&gt;</code>
+</pre>				
+				</section>
+
+				<section class="slide">
+					<h2>Post-processeur</h2>
+					<p>Le CSS est généré à l'aide du post-processeur <a href="http://www.myth.io/"><strong>myth</strong></a>.</p>
+					<p>Les fichiers sources sont placés dans le dossier <code>css/sources</code> et dans <code>css/sources/themes</code> pour les thèmes</p>
+					<p>Les fichiers sont compilés dans le dossier <code>css/themes</code> pour les thèmes, et <code>css/</code> pour la mise en forme générale.</p>
+					<p>Tous les fichiers sont également proposés dans une version non minifiée pour vous permettre de modifier ou créer votre propre css sans passer par un post-processeur.</p>
+				</section>
+
+				<section class="slide">
+					<h2>Automatisation avec Grunt</h2>
+					<p>Une configuration miniale grunt est à votre disposition également pour la compilation des css. Les 4 modules configurés dans <code>Grutfile.js</code> : </p>
+					<ul>
+						<li><a href="https://www.npmjs.com/package/grunt-myth">grunt-myth</a> : pour compiler au format CSS</li>
+						<li><a href="https://www.npmjs.com/package/grunt-contrib-cssmin">grunt-contrib-cssmin</a> : pour minifier le css</li>
+						<li><a href="https://www.npmjs.com/package/grunt-combine-media-queries">grunt-combine-media-queries</a> : pour regrouper les media-queries</li>
+						<li><a href="https://www.npmjs.com/package/grunt-contrib-watch">grunt-contrib-watch</a></li>
+					</ul>
+				</section>
+	
+				<section class="slide">
+					<h2>Pour personnaliser l'interface</h2>
+					<div class="col-left">
+					<p>Les icônes (barre d'outils, configuration ...) sont générées grâce à <a href="http://fortawesome.github.io/Font-Awesome/" lang="en">fontawesome</a>.</p>
+					<p>Le <span lang="en">fallback</span> en cas de non chargement de la police est permit grâce au script <a lang="en" href="https://github.com/filamentgroup/a-font-garde">a font garde</a> de Filament Group. <span class="small">Ce sont les images du dossier <code>img</code> qui prennent le relais en cas de non chargement.</span></p>
+					</div>
+					<div class="col-left">
+					<p>Le css d'AccessSlide, n'embarque pas la bibliothèque <span lang="en">fontawesome</span> entièremment. Pour modifier une icône, référez vous à <a href="http://fortawesome.github.io/Font-Awesome/icons/">la documentation <span lang="en">fontawesome</span></a> et modifier le fichier css d'AccessSlide avec le code voulu.</p>
+					<pre><code>
+.icon-setting-sound:before{
+	content: "\f028";
+}</code>
+</pre>
+					</div>
+				</section>
+	
+				<section class="slide">
+					<h2>Tableaux</h2>
+					<table>
+						<caption>La légende du tableau</caption>
+							<tr>
+								<th scope="col">une entête</th>
+								<th scope="col">une entête</th>
+								<th scope="col">une entête</th>
+								<th scope="col">une entête</th>
+							</tr>
+							<tr>
+								<td>une cellule</td>
+								<td>une cellule</td>
+								<td>une cellule</td>
+								<td>une cellule</td>
+							</tr>
+							<tr>
+								<td>une cellule</td>
+								<td>une cellule</td>
+								<td>une cellule</td>
+								<td>une cellule</td>
+							</tr>
+							<tr>
+								<td>une cellule</td>
+								<td>une cellule</td>
+								<td>une cellule</td>
+								<td>une cellule</td>
+							</tr>
+					</table>
+				</section>	
+				
+				<section class="slide">						
+					<h2>Images</h2>
+					<div class="col col-left">
+						<p class="center">On peut mettre des mignons chats</p>
+						<img src="img_slide/mignon-chat.jpg" alt="" />
+					</div>
+					<div class="col col-right">
+						<div class="Cmasque">
+							<p class="center">mais aussi des chats qui font peur</p>
+							<img src="img_slide/chat-qui-fait-peur.jpg" alt="" />
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">						
+					<h2>Titres</h2>
+					<p>La hiérarchie débute avec <code>&lt;h1&gt;</code> qui est le titre du diaporama</p>
+					<p>Vous pouvez utiliser tous les niveaux de titre par la suite</p>
+					<h2>Un titre de niveau 2</h2>
+					<h3>Un titre de niveau 3</h3>
+					<h4>Un titre de niveau 4</h4>
+					<h5>Un titre de niveau 5</h5>
+					<h6>Un titre de niveau 6</h6>
+				</section>	
+
+				<section class="slide">						
+					<h2>Vue responsive</h2>
+					<img class="center" src="img_slide/responsive.png" alt="" />
+					<p class="center">La mise en forme est réalisée pour s'adapter à la taille de la police et la taille de la fenêtre.</p>
+				</section>
+		
+				<section class="slide">
+					<h2>Adaptation accessibilité</h2>
+					<p>Ces paramètres sont configurables via le panneau configuration. Les paramètres sont persistants (utilisation de <code>cookies</code> ou de <code>localStorage</code> si possible). Un bouton <kbd>defaut</kbd> permet de revenir à la configuration par défaut.</p>
+					<ul>
+						<li><code>N° de diapo</code> Vocalise les numéros des diapos</li>
+						<li><code>Textes masqués</code> Emet un Bip lorsqu'un texte masqué est affiché</li>
+						<li><code>Diapo</code> Emet un Bip à l'affichage d'une diapo</li>
+						<li><code>Diapo début</code> Emet un Bip lors de l'affichage de la première diapo</li>
+						<li><code>Diapo fin</code> Emet un Bip lors de l'affichage de la dernière diapo</li>
+						<li><code>Titre</code> Vocalise le titre de la diapo courante</li>
+						<li><code>Titre fenêtre</code> Met à jour le titre de la fenêtre lors de l'affichage de la diapo courante</li>
+						<li><code>Bouton suivant</code> Donne le focus sur le bouton "suivant" lors du chargement du diaporama</li>
+						<li><code>Clic</code> Supprimer le clic pour aller à la diapo suivante.</li>
+					</ul>
+				</section>
+
+				<section class="slide">
+				<h2>Bibliothèque des sons</h2>
+				<div class="discT">
+						<ul id="discUL" class="list-disc">
+							<li><button class="disc disc1" type="button" onClick="document.getElementById('audiotest1').play();">Diapo de couverture</button></li>
+							<li><button class="disc disc1" type="button" onClick="document.getElementById('audiotest2').play();">Textes masqués</button></li>
+							<li><button class="disc disc1" type="button" onClick="document.getElementById('audiotest3').play();">Affichage des diapos</button></li>
+							<li><button class="disc disc1" type="button" onClick="document.getElementById('audiotest4').play();">Dernière diapo</button></li>
+						</ul>
+						<div style="display:none">
+							<audio id="audiotest1">
+								<source type="audio/mp3" src="sound/bip_diapo1_on.mp3">
+								<source type="audio/ogg" src="sound/bip_diapo1_on.ogg">
+							</audio>
+							<audio id="audiotest2">
+								<source type="audio/mp3" src="sound/bip_texte_masque.mp3">
+								<source type="audio/ogg" src="sound/bip_texte_masque.ogg">
+							</audio>
+							<audio id="audiotest3">
+								<source type="audio/mp3" src="sound/bip_diapo_on.mp3">
+								<source type="audio/ogg" src="sound/bip_diapo_on.ogg">
+							</audio>
+							<audio id="audiotest4">
+								<source type="audio/mp3" src="sound/bip_diapo_end.mp3">
+								<source type="audio/ogg" src="sound/bip_diapo_end.ogg">
+							</audio>
+						</div>
+					</div>		
+				</section>
+
+				<section class="slide">
+					<h2>Autres paramètres</h2>
+					<ul>
+						<li><code>Sommaire</code> : Choisir le comportement du sommaire (modale ou non-modale). Dans le cas d'un sommaire non-modal, les diapos sont redimensionnées.</li>
+						<li><code>Mode plan</code> : Affiche le diaporama en mode linéaire</li>
+					</ul>
+					<p>Ces paramètres se configurent via le panneau configuration.</p>
+				</section>
+		
+				<section class="slide">
+					<h2>Impression</h2>
+					<p>Une feuille <code>print.css</code> permet une mise en page lors de l'impression via le navigateur (<kbd>Ctrl</kbd> + <kbd>p</kbd>)</p>
+					<p>L'impression embarque certains des styles du thème choisi (propriété <code>all</code> du css du thème)</p>
+					<p>Pour qu'un élément, ou une section entière n'apparaisse pas lors de l'impression, ajoutez une classe <code>noprint</code></p>
+		<pre><code class="html">&lt;section class="slide noprint"&gt;
+ [contenu]
+&lt;/section&gt;</code></pre>				
+				</section>
+
+				<section class="slide">
+					<h2>Javascript</h2>
+					<p>Vous pouvez utiliser vos propres <code>scripts</code> dans la page <code>html</code> ou via le fichier <code>slide.js</code></p>
+				</section>
+
+				<section class="slide">
+					<h2>Le mode plan</h2>
+					<p>Le mode plan vous permet d'afficher le diaporama sous la forme d'un contenu linéarisé, ce qui permet un travail plus rapide pour la vérification et la préparation des contenus</p>
+					<p>Le mode plan s'active via le <code>panneau de configuration</code>, des repères et le numéro des diapos indiquent le contenu de chaque diapo.</p>
+					<p>Le mode plan conserve les styles <code>CSS</code> des diapos mais pas les effets.</p>
+					<div class="Cmasque">
+						<h3>Astuce !</h3>
+						<p>Utiliser deux navigateurs, chacun dans un mode différent, pour écrire et jouer votre diaporama.</p>
+					</div>	
+				</section>
+
+				<section class="slide">
+					<h2>Internationalisation</h2>
+					<p>Les éléments de l'interface peuvent être traduits via un fichier de langue (dossier <code>lang</code>).</p>
+					<p>Pour utiliser un fichier de langue, modifiez la référence au fichier dans le <code>head</code> de la page, par exemple <code>&lt;script type="text/javascript" src="lang/lang_fr.js"&gt;&lt;/script&gt;</code> pour le fichier français.</p>
+				</section>
+
+				<section class="slide">
+					<h2>Produire un fichier de langue</h2>
+						<ol>
+							<li>Ouvrez le fichier de langue avec un éditeur de texte</li>
+							<li>Modifier les étiquettes <code>label</code> des boutons, les alternatives <code>alt</code> d'images, les intitulés <code>value</code> des options de la liste des effets, les titres <code>title</code> de boutons ou de fenêtres, les messages <code>help</code> d'aide.
+							</li>
+							<li>Enregistrer votre fichier de langue en utilisant le nom de fichier <code>lang_[code de langue].js</code>.
+						</ol>
+				</section>
+
+				<section  class="slide end noprint">
+					<h2 class="end-title">Merci de votre attention !</h2>
+					<ul class="credit">
+						<li><a href="http://www.gnu.org/copyleft/gpl.html">Licence GPL</a></li>
+						<li><a href="https://github.com/access42/accessSlide">Dépot <span lang="en">Github</span></a></li>
+					</ul>
+				</section>
+		
+			</main>
+		
+		</div>
+
+		<div id="setting" class="tool-block tool-block-settings " role="dialog" tabindex="-1" style="display:none"></div>
+	
+	</div>
+
+<div id="Caudio"></div>
+<div id="Dcourante" aria-live="polite" aria-atomic="true" aria-hidden="true"></div>
+
+	<script src="slide.js"></script>
+
+	<script src="afontgarde.js"></script>
+	<script>
+	AFontGarde( 'FontAwesome', '\f0d9\f0da');
+	</script>
+</body>
+</html>

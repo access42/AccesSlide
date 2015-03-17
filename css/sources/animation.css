@@ -1,0 +1,149 @@
+/*
+ * @section CSS Effect
+ */
+ 
+/* 
+ *@subsection horizontal
+ */
+@keyframes horizontal{
+	0% {
+		height:100%;
+		width:99%;
+		opacity:1;
+	}
+	100% {
+		width:0%;
+		height:100%;
+		opacity:0.9;
+	}
+}
+
+#volet.ALTR,
+#volet.ARTL{
+	display:block;
+	animation:horizontal 1.5s ease;
+}
+
+#volet.ALTR{
+	left:0;
+}
+
+#volet.ARTL{
+	right:0;
+}
+
+/* 
+ *@subsection vertical
+ */
+@keyframes bottom-top{
+	0% {
+		top:0;
+		bottom:0;
+	}
+	100% {
+		top:0;
+		bottom:100%;
+	}
+}
+
+#volet.ATtoB{
+	display:block;
+	animation:bottom-top 2s ease;
+}
+/* 
+ *@subsection top-bottom
+ */
+@keyframes top-bottom{
+	0% {
+		left:0;
+		right:0;
+		top:-15px;
+		bottom:0;
+	}
+	100% {
+		left:0;
+		right:0;
+		top:100%;
+		bottom:0;
+	}
+}
+
+#volet.ATtoT{
+	display:block;
+	animation:top-bottom 2s ease;
+}
+
+/*
+ * @subsection fade in
+ */
+
+@keyframes fadein{
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+.slide.fadein{
+	animation:fadein 1.5s linear;
+}
+/*
+ * @subsection Flash Effect
+ */
+@keyframes flash{
+	0% {
+		top:0;
+		bottom:0;
+		opacity:1;
+	}
+	100% {
+		top:0;
+		bottom:0;
+		opacity:0;
+	}
+}
+
+#volet.Flash{
+	display:block;
+	animation:flash 2s ease;
+}
+
+/*
+ * @subsection Scale Effect
+ */
+
+@keyframes scale{
+	0% { 
+		transform:scale(0);
+	}
+	100% {
+		transform:scale(1);
+	}
+}
+
+.slide.Escale{
+	display:block;
+	animation:scale 1s ease-out;
+}
+
+/*
+ * @subsection Flip effet
+ */
+
+@keyframes flip{
+	0% { 
+		transform: rotateY(-180deg) ;
+	}
+	100% {
+		transform: rotateY(0deg);
+	}
+}
+
+.slide.Flip{
+	animation:flip 1s ease-out;
+	transform-origin:0 0
+}
+
+
