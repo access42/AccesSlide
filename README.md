@@ -143,4 +143,4 @@ Pour utiliser un fichier de langue, modifiez la référence au fichier dans le h
 - Modifiez les étiquettes `label` des boutons, les alternatives `alt` d'images, les intitulés `value` des options de la liste des effets, les titres `title` de boutons ou de fenêtres, les messages help d'aide.
 - Enregistrez votre fichier de langue en utilisant le nom de fichier `lang_[code de langue].js`. 
 
-Une démonstration est visible sur le site dédié, <a href="htpp://www.accesslide.net">accesslide.net</a>
+Une démonstration est visible sur le site dédié, htpp://www.accesslide.net
