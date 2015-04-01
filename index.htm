@@ -61,7 +61,7 @@
 		
 				<section class="slide">
 					<h2>Structure</h2>
-					<p>Les slides s'insèrent dans l'élément <code>main</code> avec des éléments <code>section</code> associés à une classe <code>slide</code>.</p>
+					<p>Les diapos s'insèrent dans l'élément <code>main</code> avec des éléments <code>section</code> associés à une classe <code>slide</code>.</p>
 					<p>La première diapositive a une classe complémentaire <code>couv</code> et la dernière, une classe <code>end</code>.</p>
 					<p>On peut imbriquer des <code>section</code> dans des <code>section</code>.</p>
 				</section>
@@ -80,9 +80,9 @@
 
 				<section class="slide">
 					<h2>Masquer des éléments</h2>
-					<p>Tous les éléments <code>html</code> d'un slide peuvent être masqués via la classe <code>Cmasque</code>, ils apparaitront sur l'action <q>diapo suivante</q>.
+					<p>Tous les éléments <code>html</code> d'une diapo peuvent être masqués via la classe <code>Cmasque</code>, ils apparaîtront sur l'action <q>diapo suivante</q>.
 					</p>
-					<p>Exemple : cette diapositive contient quatre éléments masqués</p>
+					<p>Exemple : cette diapositive contient trois éléments masqués</p>
 					<ul>
 						<li class="Cmasque">un texte masqué</li>
 						<li class="Cmasque">un second texte masqué <span class="Cmasque"> un élément masqué en ligne</span></li>
@@ -91,14 +91,14 @@
 		
 				<section class="slide">
 					<h2>Navigation</h2>
-					<p>La barre de navigation contient successivement</p>
+					<p>La barre de navigation contient successivement :</p>
 					<ol>
-						<li>un bouton <kbd>précédent</kbd></li>
-						<li>une <kbd>liste de sélection</kbd> pour atteindre une diapo par son index</li>
-						<li>un bouton <kbd>suivant</kbd></li>
-						<li>un <kbd>sommaire</kbd> pour atteindre une diapo via son titre</li>
-						<li>l'index (n° de la diapo courante et total des diapos)</li>
-						<li>un bouton de <kbd>configuration</kbd></li>
+						<li>un bouton <kbd>précédent</kbd>,</li>
+						<li>une <kbd>liste de sélection</kbd> pour atteindre une diapo par son index,</li>
+						<li>un bouton <kbd>suivant</kbd>,</li>
+						<li>un <kbd>sommaire</kbd> pour atteindre une diapo via son titre,</li>
+						<li>l'index (n° de la diapo courante et total des diapos),</li>
+						<li>un bouton de <kbd>configuration</kbd>.</li>
 					</ol>
 				</section>
 
@@ -111,7 +111,7 @@
 						<li><kbd>Fin</kbd> Dernière diapo</li>
 						<li><kbd>ALT + 0 (zéro)</kbd> Sommaire</li>
 					</ul>
-					<p class="small">Pour passer à la diapo suivante avec Jaws : ignorer l'appui sur la touche suivante (<kbd>insert</kbd> + <kbd>3</kbd>) puis ensuite appuyer sur la barre <kbd>espace</kbd> pour faire défiler le diaporama.</p>
+					<p class="small">Pour passer à la diapo suivante avec Jaws : ignorer l'appui sur la touche suivante (<kbd>insert</kbd> + <kbd>3</kbd>), puis appuyer sur la barre <kbd>espace</kbd> pour faire défiler le diaporama.</p>
 					<p class="small">Avec NVDA, l'appui sur les touches pour ignorer la touche suivante n'est pas nécessaire, la barre d'espace fonctionne.</p>
 				</section>
 		
@@ -121,28 +121,28 @@
 					<h3>Pour créer vos propres effets :</h3>
 					<ol>
 						<li>Créer une <code>class</code>, par exemple <code>.mon-effet</code></li>
-						<li>Dans le fichier <code>AccesSlide.js</code>, créer une entrée dans l'objet <code>config</code> ( voir les instructions dans le fichier à la section <code>Effects</code>)</li>
+						<li>Dans le fichier <code>AccesSlide.js</code>, créer une entrée dans l'objet <code>config</code> (voir les instructions dans le fichier à la section <code>Effects</code>)</li>
 						<li>Dans le fichier de langue : créer une entrée pour l'étiquette de l'effet. Attention : l'entrée dans le fichier de langue doit avoir le même nom que dans l'objet <code>config</code></li>
 					</ol>
-					<p>Le nouvel effet sera ajouté automatiquemet à la liste des effets dans le panneau de configuration</p>
+					<p>Le nouvel effet sera ajouté automatiquement à la liste des effets dans le panneau de configuration.</p>
 				</section>
 			
 				<section class="slide">						
 					<h2>CSS</h2>
 					<p>2 fichiers CSS sont nécessaires : </p>
 					<ul>
-						<li><code>css/style.css</code> : les propriétés générales du diaporama</li>
-						<li><code>css/themes/default.css</code> : le thème</li>
+						<li><code>css/style.css</code> : les propriétés générales du diaporama,</li>
+						<li><code>css/themes/default.css</code> : le thème.</li>
 					</ul>
 				</section>	
 
 				<section class="slide">						
 					<h2>Thèmes</h2>
-					<p>Plusieurs thèmes sont livrés avec AccesSlide dans le dossier <code>css/themes</code>.</p>
+					<p>Plusieurs thèmes sont livrés avec AccesSlide dans le dossier <code>css/themes</code> :</p>
 					<ul>
-						<li><button onClick="javascript:changeColors('default');return false;">Thème par défaut</button></li>
-						<li><button onClick="javascript:changeColors('xmas');return false;">Thème de noël</button></li>
-						<li><button onClick="javascript:changeColors('black');return false;">Thème black</button></li>		
+						<li><button onClick="javascript:changeColors('default');return false;">Thème par défaut</button>,</li>
+						<li><button onClick="javascript:changeColors('xmas');return false;">Thème de noël</button>,</li>
+						<li><button onClick="javascript:changeColors('black');return false;">Thème black</button>.</li>		
 					</ul>
 <pre>
 <code class="html">&lt;!-- Theme stylesheet --&gt;
@@ -152,19 +152,19 @@
 
 				<section class="slide">
 					<h2>Post-processeur</h2>
-					<p>Le CSS est généré à l'aide du post-processeur <a href="http://www.myth.io/"><strong>myth</strong></a>.</p>
+					<p>Le fichier CSS est généré à l'aide du post-processeur <a href="http://www.myth.io/"><strong>myth</strong></a>.</p>
 					<p>Les fichiers sources sont placés dans le dossier <code>css/sources</code> et dans <code>css/sources/themes</code> pour les thèmes</p>
 					<p>Les fichiers sont compilés dans le dossier <code>css/themes</code> pour les thèmes, et <code>css/</code> pour la mise en forme générale.</p>
-					<p>Tous les fichiers sont également proposés dans une version non minifiée pour vous permettre de modifier ou créer votre propre css sans passer par un post-processeur.</p>
+					<p>Tous les fichiers sont également proposés dans une version non minifiée pour vous permettre de modifier ou créer votre propre CSS sans passer par un post-processeur.</p>
 				</section>
 
 				<section class="slide">
-					<h2>Automatisation avec Grunt</h2>
-					<p>Une configuration miniale grunt est à votre disposition également pour la compilation des css. Les 4 modules configurés dans <code>Grutfile.js</code> : </p>
+					<h2>Automatisation avec <span lang="en">Grunt</span></h2>
+					<p>Une configuration minimale <span lang="en">Grunt</span> est à votre disposition également pour la compilation des CSS. Les 4 modules configurés dans <code>Grutfile.js</code> : </p>
 					<ul>
 						<li><a href="https://www.npmjs.com/package/grunt-myth">grunt-myth</a> : pour compiler au format CSS</li>
-						<li><a href="https://www.npmjs.com/package/grunt-contrib-cssmin">grunt-contrib-cssmin</a> : pour minifier le css</li>
-						<li><a href="https://www.npmjs.com/package/grunt-combine-media-queries">grunt-combine-media-queries</a> : pour regrouper les media-queries</li>
+						<li><a href="https://www.npmjs.com/package/grunt-contrib-cssmin">grunt-contrib-cssmin</a> : pour minifier le CSS</li>
+						<li><a href="https://www.npmjs.com/package/grunt-combine-media-queries">grunt-combine-media-queries</a> : pour regrouper les <span lang="en">media queries</span></li>
 						<li><a href="https://www.npmjs.com/package/grunt-contrib-watch">grunt-contrib-watch</a></li>
 					</ul>
 				</section>
@@ -173,10 +173,10 @@
 					<h2>Pour personnaliser l'interface</h2>
 					<div class="col-left">
 					<p>Les icônes (barre d'outils, configuration ...) sont générées grâce à <a href="http://fortawesome.github.io/Font-Awesome/" lang="en">fontawesome</a>.</p>
-					<p>Le <span lang="en">fallback</span> en cas de non chargement de la police est permit grâce au script <a lang="en" href="https://github.com/filamentgroup/a-font-garde">a font garde</a> de Filament Group. <span class="small">Ce sont les images du dossier <code>img</code> qui prennent le relais en cas de non chargement.</span></p>
+					<p>Le <span lang="en">fallback</span> en cas de non chargement de la police est permis grâce au script <a lang="en" href="https://github.com/filamentgroup/a-font-garde">a font garde</a> de Filament Group. <span class="small">Ce sont les images du dossier <code>img</code> qui prennent le relais en cas de non chargement.</span></p>
 					</div>
 					<div class="col-left">
-					<p>Le css d'AccesSlide, n'embarque pas la bibliothèque <span lang="en">fontawesome</span> entièremment. Pour modifier une icône, référez vous à <a href="http://fortawesome.github.io/Font-Awesome/icons/">la documentation <span lang="en">fontawesome</span></a> et modifiez le fichier css d'AccesSlide avec le code voulu.</p>
+					<p>Le css d'AccesSlide n'embarque pas la bibliothèque <span lang="en">fontawesome</span> entièremment. Pour modifier une icône, référez vous à <a href="http://fortawesome.github.io/Font-Awesome/icons/">la documentation <span lang="en">fontawesome</span></a> et modifiez le fichier css d'AccesSlide avec le code voulu.</p>
 					<pre><code>
 .icon-setting-sound:before{
 	content: "\f028";
@@ -337,8 +337,8 @@
 				<section class="slide">
 					<h2>Produire un fichier de langue</h2>
 						<ol>
-							<li>Ouvrez le fichier de langue avec un éditeur de texte</li>
-							<li>Modifiez les étiquettes <code>label</code> des boutons, les alternatives <code>alt</code> d'images, les intitulés <code>value</code> des options de la liste des effets, les titres <code>title</code> de boutons ou de fenêtres, les messages <code>help</code> d'aide.
+							<li>Ouvrez le fichier de langue avec un éditeur de texte.</li>
+							<li>Modifiez les étiquettes <code>label</code> des boutons, les alternatives <code>alt</code> des images, les intitulés <code>value</code> des options de la liste des effets, les titres <code>title</code> de boutons ou de fenêtres, les messages <code>help</code> d'aide.
 							</li>
 							<li>Enregistrez votre fichier de langue en utilisant le nom de fichier <code>lang_[code de langue].js</code>.
 						</ol>
