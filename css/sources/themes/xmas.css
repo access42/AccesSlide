@@ -89,7 +89,7 @@ button{
 	}
 
 figcaption{
-	font-size:0.8em;
+	font-size:80%
 }
 
 code,
@@ -100,7 +100,6 @@ kbd{
 	border:1px solid var(--theme-alt);
 	background:var(--backg-alt);
 	font-size:70%;
-	font-size:2.5vh;
 	line-height:1em;
 	white-space: nowrap;
 	border-radius:2px;
@@ -113,8 +112,6 @@ h3 kbd{
 
 pre code{
 	border:0;
-	font-size:160%;
-	font-size:4.5vh;
 	white-space: pre-wrap;
 }
 
@@ -176,15 +173,13 @@ table{
  * @section 2. TYPO
  * -------------------------
  */
- 
+
 /** @subsection 2.1 HEADINGS **/
 
 h2{
 	margin-bottom:0;
-	padding:0.1em 1em 0.3em 1em;
+	padding:0.1em;
 	border-left:5px solid var(--theme);
-	font-size:250%;
-	font-size:7vh;
 	font-variant:small-caps;
 	line-height:1.1em;
 	background:var(--backg-alt);
@@ -194,7 +189,7 @@ h2{
 	@media (--medium){
 		h2{
 			float:left;
-			margin-bottom:1em;
+			margin-bottom:0.5em;
 		}
 		h2 + *{
 			clear:both;
@@ -205,8 +200,6 @@ h2{
 		float:none;
 		border-left:0;
 		text-align:center;	
-		font-size:350%;
-		font-size:11vh;
 		background:transparent;
 	}
 
@@ -216,8 +209,6 @@ h3{
 	border-top:2px solid var(--theme);
 	background:var(--backg);
 	color:var(--font-alt);
-	font-size:190%;
-	font-size:6vh;
 	font-variant:small-caps;
 	font-weight:normal;
 	font-family:'os-regular';
@@ -235,20 +226,14 @@ h3{
 
 h4{
 	margin:0.3em;
-	font-size:90%;
-	font-size:3.1vh;
 }
 
 h5{
 	margin:0.3em;
-	font-size:85%;
-	font-size:2.9vh;
 }
 
 h6{
 	margin:0.3em;
-	font-size:80%;
-	font-size:2.8vh;
 }
 
 /** @subsection 2.2 TEXT **/
@@ -258,8 +243,6 @@ h6{
 .slide ol,
 .slide blockquote{
 	margin:0.2em 0 0.5em 0;
-	font-size:160%;
-	font-size:5vh;
 	line-height:150%;
 }
 
@@ -270,19 +253,14 @@ h6{
 }
 
 .slide .small{
-	font-size:120%;
+	font-size:90%;
 	font-weight:normal;
 }
 
 .slide .small *{
-	font-size:1em;
+	font-size:100%;
 	font-weight:normal;
 }
-
-#wrapper{
-	font-size:7vh;
-}
-
 /**
  * -------------------------
  * @section 3. HEADER
