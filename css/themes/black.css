@@ -168,8 +168,8 @@ h3 kbd {
 
 pre code {
 	border: 0;
-	font-size: 80%;
-	font-size: 2.5vh;
+	font-size: 160%;
+	font-size: 4.5vh;
 	white-space: pre-wrap;
 }
 
@@ -193,7 +193,7 @@ table {
 caption {
 	padding: 5px;
 	color: #000;
-	font-size: 70%;
+	font-size: 150%;
 	font-weight: bold;
 	text-align: left;
 	background: orange;
@@ -233,8 +233,8 @@ h2 {
 	padding: 0.1em 1em 0.3em 1em;
 	border-left: 5px solid orange;
 	color: #000;
-	font-size: 160%;
-	font-size: 4vh;
+	font-size: 250%;
+	font-size: 7vh;
 	-webkit-font-feature-settings: "c2sc";
 	-moz-font-feature-settings: "c2sc";
 	font-feature-settings: "c2sc";
@@ -250,8 +250,8 @@ h2 {
 	border-left: 0;
 	color: #fff;
 	text-align: center;
-	font-size: 200%;
-	font-size: 8vh;
+	font-size: 350%;
+	font-size: 11vh;
 	background: transparent;
 }
 
@@ -261,8 +261,8 @@ h3 {
 	border-top: 2px solid orange;
 	background: #fff;
 	color: #000;
-	font-size: 95%;
-	font-size: 3.5vh;
+	font-size: 190%;
+	font-size: 6vh;
 	-webkit-font-feature-settings: "c2sc";
 	-moz-font-feature-settings: "c2sc";
 	font-feature-settings: "c2sc";
@@ -296,8 +296,8 @@ h6 {
 .slide ol,
 .slide blockquote {
 	margin: 0.2em 0 0.5em 0;
-	font-size: 130%;
-	font-size: 3.3vh;
+	font-size: 160%;
+	font-size: 5vh;
 	line-height: 150%;
 }
 
@@ -308,7 +308,7 @@ h6 {
 }
 
 .slide .small {
-	font-size: 0.8em;
+	font-size: 120%;
 	font-weight: normal;
 }
 
@@ -318,7 +318,7 @@ h6 {
 }
 
 #wrapper {
-	font-size: 3vh;
+	font-size: 7vh;
 }
 
 /**
