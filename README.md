@@ -41,6 +41,9 @@ La barre de navigation contient successivement :
 - `Fin` : Dernière diapo
 - `ALT` + `0` (zéro) : Sommaire
 
+Pour passer à la diapo suivante avec <span lang="en">Jaws</span> : ignorer l'appui sur la touche suivante (`INSERT` + `3`), puis appuyer sur la barre `Espace` pour faire défiler le diaporama.
+Avec NVDA, ignorer la touche suivante n'est pas nécessaire, la barre d'espace fonctionne.
+				
 ## Navigation avec une télécommande
 Le diaporama se pilote avec une télécommande via les équivalents de touches `Page suivante` et `Page précédente`.
 
@@ -49,7 +52,7 @@ Les effets disponibles se paramètrent via le panneau de configuration.
 
 Pour créer un effet :
 
-1. créer une classe CSS ;
+1. créer une classe CSS, par exemple `.mon-effet` ;
 2. créer une entrée dans l'objet `config` du fichier AccesSlide.js (voir l'exemple dans le fichier) ;
 3. créer une entrée dans le fichier de lang pour l'étiquette de l'effet. Attention l'entrée doit avoir le même nom que celle créé dans l'objet \`config.
 
