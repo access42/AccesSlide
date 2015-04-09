@@ -180,7 +180,7 @@
 					<p>Le <span lang="en">fallback</span> en cas de non chargement de la police est permis grâce au script <a lang="en" href="https://github.com/filamentgroup/a-font-garde">a font garde</a> de Filament Group. <span class="small">Ce sont les images du dossier <code>img</code> qui prennent le relais en cas de non chargement.</span></p>
 					</div>
 					<div class="col-left">
-					<p>Les fichiers css d'AccesSlide n'embarquent pas entièremment la bibliothèque <span lang="en">fontawesome</span>. Pour modifier une icône, référez-vous à <a href="http://fortawesome.github.io/Font-Awesome/icons/">la documentation <span lang="en">fontawesome</span></a> et modifiez le fichier CSS d'AccesSlide avec le code voulu.</p>
+					<p>Les fichiers CSS d'AccesSlide n'embarquent pas entièremment la bibliothèque <span lang="en">fontawesome</span>. Pour modifier une icône, référez-vous à <a href="http://fortawesome.github.io/Font-Awesome/icons/">la documentation <span lang="en">fontawesome</span></a> et modifiez le fichier CSS d'AccesSlide avec le code voulu.</p>
 					<pre><code>
 .icon-setting-sound:before{
 	content: "\f028";
@@ -194,10 +194,10 @@
 					<table>
 						<caption>La légende du tableau</caption>
 							<tr>
-								<th scope="col">une en-tête</th>
-								<th scope="col">une en-tête</th>
-								<th scope="col">une en-tête</th>
-								<th scope="col">une en-tête</th>
+								<th scope="col">un en-tête</th>
+								<th scope="col">un en-tête</th>
+								<th scope="col">un en-tête</th>
+								<th scope="col">un en-tête</th>
 							</tr>
 							<tr>
 								<td>une cellule</td>
@@ -223,12 +223,12 @@
 				<section class="slide">						
 					<h2>Images</h2>
 					<div class="col col-left">
-						<p class="center">On peut mettre des mignons chats</p>
+						<p class="center">On peut mettre des mignons chats,</p>
 						<img src="img_slide/mignon-chat.jpg" alt="" />
 					</div>
 					<div class="col col-right">
 						<div class="Cmasque">
-							<p class="center">mais aussi des chats qui font peur</p>
+							<p class="center">mais aussi des chats qui font peur !</p>
 							<img src="img_slide/chat-qui-fait-peur.jpg" alt="" />
 						</div>
 					</div>
@@ -263,7 +263,7 @@
 						<li><code>Titre</code> Vocalise le titre de la diapo courante</li>
 						<li><code>Titre fenêtre</code> Met à jour le titre de la fenêtre lors de l'affichage de la diapo courante</li>
 						<li><code>Bouton suivant</code> Donne le focus sur le bouton <kbd>Suivant</kbd> lors du chargement du diaporama</li>
-						<li><code>Clic</code> Désactive le clic pour aller à la diapo suivante.</li>
+						<li><code>Clic</code> Désactive le clic pour aller à la diapo suivante</li>
 					</ul>
 				</section>
 
@@ -309,7 +309,7 @@
 				<section class="slide">
 					<h2>Impression</h2>
 					<p>Une feuille <code>print.css</code> permet une mise en page lors de l'impression via le navigateur (<kbd>Ctrl</kbd> + <kbd>p</kbd>).</p>
-					<p>L'impression embarque certains des styles du thème choisi (propriété <code>all</code> du css du thème).</p>
+					<p>L'impression embarque certains des styles du thème choisi (propriété <code>all</code> du fichier CSS du thème).</p>
 					<p>Pour qu'un élément, ou une section entière, n'apparaisse pas lors de l'impression, ajoutez une classe <code>noprint</code>.</p>
 		<pre><code class="html">&lt;section class="slide noprint"&gt;
  [contenu]
@@ -335,7 +335,7 @@
 				<section class="slide">
 					<h2>Localisation</h2>
 					<p>Les éléments de l'interface peuvent être traduits via un fichier de langue (dossier <code>lang</code>).</p>
-					<p>Pour utiliser un fichier de langue, modifiez la référence au fichier dans le <code>head</code> de la page, par exemple <code>&lt;script type="text/javascript" src="lang/lang_fr.js"&gt;&lt;/script&gt;</code> pour le fichier français.</p>
+					<p>Pour utiliser un fichier de langue, modifiez la référence au fichier dans le <code>head</code> de la page, par exemple <code class="html">&lt;script type="text/javascript" src="lang/lang_fr.js"&gt;&lt;/script&gt;</code> pour le fichier français.</p>
 				</section>
 
 				<section class="slide">
