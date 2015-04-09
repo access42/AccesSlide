@@ -105,6 +105,8 @@ Les icônes (barre d'outils, configuration, etc.) sont générées grâce à <a 
 
 Le fallback en cas de non chargement de la police est permis grâce au script <a href="https://github.com/filamentgroup/a-font-garde">a font garde</a> de Filament Group. Ce sont les images du dossier `img` qui prennent le relais en cas de non chargement.
 
+Les fichiers CSS d'AccesSlide n'embarquent pas entièremment la bibliothèque <span lang="en">fontawesome</span>. Pour modifier une icône, référez-vous à <a href="http://fortawesome.github.io/Font-Awesome/icons/">la documentation <span lang="en">fontawesome</span></a> et modifiez le fichier CSS d'AccesSlide avec le code voulu.
+
 # Adaptation accessibilité
 Ces paramètres sont configurables via le panneau de configuration. Les paramètres sont persistants (utilisation de cookies ou de `localStorage` si possible). Un bouton défaut permet de revenir à la configuration par défaut.
 
