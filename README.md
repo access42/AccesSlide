@@ -1,7 +1,7 @@
 AccesSlide
 ===========
 
-Un framework pour réaliser des présentations accessibles en HTML5-CSS3-JS
+Un framework pour réaliser des présentations accessibles en HTML5-CSS3-JS.
 
 # Structure
 Les diapos s'insèrent dans l'élément `main` avec des éléments `section` associés à une classe `slide`.
@@ -22,7 +22,7 @@ On peut imbriquer des `section` dans des `section`.
 Attention : il est préférable de respecter un passage à la ligne pour le premier titre h2 d'une section.
 
 # Masquer des éléments
-Tous les éléments HTML d'une diapo peuvent être masqués via la classe `Cmasque`, ils apparaîtront sur l'action « diapo suivante » . 
+Tous les éléments HTML d'une diapo peuvent être masqués via la classe `Cmasque`, ils apparaîtront sur l'action « diapo suivante ». 
 
 # Navigation
 La barre de navigation contient successivement :
@@ -64,7 +64,7 @@ Vous pouvez animer un volet qui se superpose à la diapo ou la diapo elle-même.
 - `css/style.css` : propriétés générales du diaporama;
 - `css/themes/default.css` : thème.
 
-Plusieurs thèmes sont livrés avec AccessSlide dans le dossier `css/themes`.
+Plusieurs thèmes sont livrés avec AccesSlide dans le dossier `css/themes`.
 
 	<!-- Theme stylesheet -->
 	<link rel="stylesheet" href="css/themes/default.css" type="text/css" media="all" />
