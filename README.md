@@ -19,7 +19,6 @@ On peut imbriquer des `section` dans des `section`.
 	<section class="slide" aria-label="titre de la diapo">
 	 [contenu]
 	</section>
-Attention : il est préférable de respecter un passage à la ligne pour le premier titre h2 d'une section.
 
 # Masquer des éléments
 Tous les éléments HTML d'une diapo peuvent être masqués via la classe `Cmasque`, ils apparaîtront sur l'action « diapo suivante ». 
