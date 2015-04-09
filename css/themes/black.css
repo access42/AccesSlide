@@ -126,7 +126,7 @@ button {
 }
 
 figcaption {
-	font-size: 0.8em;
+	font-size: 80%;
 }
 
 strong {
@@ -155,7 +155,6 @@ kbd {
 	background: #ddd;
 	color: #000;
 	font-size: 70%;
-	font-size: 2.5vh;
 	line-height: 1em;
 	white-space: nowrap;
 	border-radius: 2px;
@@ -168,8 +167,6 @@ h3 kbd {
 
 pre code {
 	border: 0;
-	font-size: 80%;
-	font-size: 2.5vh;
 	white-space: pre-wrap;
 }
 
@@ -193,7 +190,6 @@ table {
 caption {
 	padding: 5px;
 	color: #000;
-	font-size: 70%;
 	font-weight: bold;
 	text-align: left;
 	background: orange;
@@ -230,11 +226,9 @@ td {
 
 h2 {
 	margin-bottom: 0;
-	padding: 0.1em 1em 0.3em 1em;
+	padding: 0.1em;
 	border-left: 5px solid orange;
 	color: #000;
-	font-size: 160%;
-	font-size: 4vh;
 	-webkit-font-feature-settings: "c2sc";
 	-moz-font-feature-settings: "c2sc";
 	font-feature-settings: "c2sc";
@@ -250,8 +244,6 @@ h2 {
 	border-left: 0;
 	color: #fff;
 	text-align: center;
-	font-size: 200%;
-	font-size: 8vh;
 	background: transparent;
 }
 
@@ -261,8 +253,6 @@ h3 {
 	border-top: 2px solid orange;
 	background: #fff;
 	color: #000;
-	font-size: 95%;
-	font-size: 3.5vh;
 	-webkit-font-feature-settings: "c2sc";
 	-moz-font-feature-settings: "c2sc";
 	font-feature-settings: "c2sc";
@@ -273,20 +263,14 @@ h3 {
 
 h4 {
 	margin: 0.3em;
-	font-size: 90%;
-	font-size: 3.1vh;
 }
 
 h5 {
 	margin: 0.3em;
-	font-size: 85%;
-	font-size: 2.9vh;
 }
 
 h6 {
 	margin: 0.3em;
-	font-size: 80%;
-	font-size: 2.8vh;
 }
 
 /** @subsection 2.2 TEXT **/
@@ -296,8 +280,6 @@ h6 {
 .slide ol,
 .slide blockquote {
 	margin: 0.2em 0 0.5em 0;
-	font-size: 130%;
-	font-size: 3.3vh;
 	line-height: 150%;
 }
 
@@ -308,17 +290,13 @@ h6 {
 }
 
 .slide .small {
-	font-size: 0.8em;
+	font-size: 90%;
 	font-weight: normal;
 }
 
 .slide .small * {
-	font-size: 1em;
+	font-size: 100%;
 	font-weight: normal;
-}
-
-#wrapper {
-	font-size: 3vh;
 }
 
 /**
@@ -573,7 +551,7 @@ button.disc1:focus {
 
 h2 {
 	float: left;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 }
 
 h2 + * {
