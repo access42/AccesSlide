@@ -35,7 +35,7 @@ La barre de navigation contient successivement :
 - un bouton de configuration.
 
 ## Navigation clavier
-- `Espace` ; `Flèche droite` ;`Clic` : Diapo suivante
+- `Espace` ; `Flèche droite` ; `Clic` : Diapo suivante
 - `Flèche gauche` ; `SHIFT + Espace` : Diapo précédente
 - `Début` : Première diapo
 - `Fin` : Dernière diapo
@@ -49,9 +49,9 @@ Les effets disponibles se paramètrent via le panneau de configuration.
 
 Pour créer un effet :
 
-1 créer une classe CSS ;
-2 créer une entrée dans l'objet `config` du fichier AccesSlide.js (voir l'exemple dans le fichier) ;
-3 créer une entrée dans le fichier de lang pour l'étiquette de l'effet. Attention l'entrée doit avoir le même nom que celle créé dans l'objet \`config.
+1. créer une classe CSS ;
+2. créer une entrée dans l'objet `config` du fichier AccesSlide.js (voir l'exemple dans le fichier) ;
+3. créer une entrée dans le fichier de lang pour l'étiquette de l'effet. Attention l'entrée doit avoir le même nom que celle créé dans l'objet \`config.
 
 Vous pouvez animer un volet qui se superpose à la diapo ou la diapo elle-même.
 
@@ -76,7 +76,7 @@ Les fichiers sont compilés dans le dossier `css/themes` pour les thèmes, et `c
 Tous les fichiers sont également proposés dans une version non minifiée pour vous permettre de modifier ou créer vos propres feuilles CSS sans passer par un post-processeur.
 
 ## Automatisation avec Grunt
-Une configuration minimale Grunt est à votre disposition également pour la compilation des fichiers css. Les 4 modules configurés dans Gruntfile.js :
+Une configuration minimale Grunt est à votre disposition également pour la compilation des fichiers css. Les 4 modules configurés dans `Gruntfile.js` :
 
 - grunt-myth : pour compiler au format CSS ;
 - grunt-contrib-cssmin : pour minifier le css ;
@@ -103,7 +103,7 @@ Les icônes (barre d'outils, configuration, etc.) sont générées grâce à <a 
 Le fallback en cas de non chargement de la police est permis grâce au script <a href="https://github.com/filamentgroup/a-font-garde">a font garde</a> de Filament Group. Ce sont les images du dossier `img` qui prennent le relais en cas de non chargement.
 
 # Adaptation accessibilité
-Ces paramètres sont configurables via le panneau de configuration. Les paramètres sont persistants (utilisation de cookies ou de localStorage si possible). Un bouton défaut permet de revenir à la configuration par défaut.
+Ces paramètres sont configurables via le panneau de configuration. Les paramètres sont persistants (utilisation de cookies ou de `localStorage` si possible). Un bouton défaut permet de revenir à la configuration par défaut.
 
 - **N° de diapo** : Vocalise les numéros des diapos
 - **Textes masqués** :  Émet un bip lorsqu'un texte masqué est affiché
@@ -132,7 +132,7 @@ Le mode plan s'active via le panneau de configuration, des repères et le numér
 
 Le mode plan conserve les styles CSS des diapos mais pas les effets.
 
-# Internationalisation
+# Localisation
 
 Les éléments de l'interface peuvent être traduits dans un fichier de langue (dossier `lang`).
 
