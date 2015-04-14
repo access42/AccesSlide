@@ -4,15 +4,15 @@
 <head>
 	<title>AccesSlide Slideshow - Access 42</title>
 	<meta charset="utf-8">	<!-- Layout stylesheet -->
-	<link rel="stylesheet" href="css/font/small.css" type="text/css" media="screen">	
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../css/font/small.css" type="text/css" media="screen">	
+	<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen">
 	<!-- Theme stylesheet -->
-	<link rel="stylesheet" id="currentCSS" href="css/themes/default.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+	<link rel="stylesheet" id="currentCSS" href="../css/themes/default.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="../css/print.css" type="text/css" media="print">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="AccesSlide.js"></script>
-	<script src="lang/lang_en.js"></script>
-	<script src="highlight/highlight.pack.js"></script>
+	<script src="../AccesSlide.js"></script>
+	<script src="../lang/lang_en.js"></script>
+	<script src="../highlight/highlight.pack.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 		<style>
 		.lang-btn{position:absolute;text-decoration:none;font-size:70%;right:20px;border:1px solid #333;border-top:0;padding:0 5px 3px 5px;border-radius:0 0 3px 3px;z-index:900}
@@ -22,14 +22,14 @@
 
 <body>
 
-	<a href="#" class="btn-github noprint"><img src="img_slide/forkme.png" alt="Fork me on Github"></a>
-	<a lang="fr" class="lang-btn" href="../fr/">Français</a>
+	<a href="#" class="btn-github noprint"><img src="../img_slide/forkme.png" alt="Fork me on Github"></a>
+	<a lang="fr" class="lang-btn" href="../index.htm">Français</a>
 	<div id="screen" class="modeplan" data-effect="Eno">
 
 		<div id="volet"></div>
 		
 		<header id="banner" role="banner" class="main-header clearfix">
-			<a href="http://www.access42.net"><img id="logo" class="main-logo" src="img_slide/logo_transparent.png" alt="Access42" /></a>
+			<a href="http://www.access42.net"><img id="logo" class="main-logo" src="../img_slide/logo_transparent.png" alt="Access42" /></a>
 			<h1 class="main-title">AccesSlide Slideshow - Access 42</h1>
 		</header>
 	
@@ -60,14 +60,14 @@
 			<main role="main" id="main">
 	
 				<section class="slide couv">
-					<h2>AccesSlide <br /><span class="small">Finally an accessible slideshow</span></h2>
+					<h2>AccesSlide<br /><span class="small">Finally an accessible slideshow</span></h2>
 					<p>by <a href="http://www.access42.net">Access42</a></p>
 				</section>
 		
 				<section class="slide">
 					<h2>Structure</h2>
 					<p>Put the slides in the <code>main</code> element with <code>section</code> elements associated with a <code>slide</code> class.</p>
-					<p>The first and the last slide have an extra class : respectively a <code>couv</code> and <code>end</code> class.</p>
+					<p>The first and the last slide have an extra class: respectively a <code>couv</code> and <code>end</code> class.</p>
 					<p><code>section</code> elements can be imbricated in <code>section</code> elements.</p>
 				</section>
 		
@@ -85,11 +85,11 @@
 
 				<section class="slide">
 					<h2>Hide elements</h2>
-					<p>Every <code>HTML</code> elements of a slide can be hidden using the <code>Cmasque</code> class, they will appear with the action <q>next slide</q>.
+					<p>Every <code>html</code> elements of a slide can be hidden using the <code>Cmasque</code> class, they will appear with the action <q>next slide</q>.
 					</p>
-					<p>Example : there is three hidden elements in this slide.</p>
+					<p>Example: there is three hidden elements in this slide.</p>
 					<ul>
-						<li class="Cmasque">hidden text,</li>
+						<li class="Cmasque">A hidden text,</li>
 						<li class="Cmasque">a second hidden text, <span class="Cmasque"> a hidden inline element.</span></li>
 					</ul>
 				</section>
@@ -98,12 +98,12 @@
 					<h2>Navigation</h2>
 					<p>The navigation bar has (in order of appearance):</p>
 					<ol>
-						<li>a <kbd>previous</kbd> button</li>
-						<li>a <kbd>selection list</kbd> to reach a slide by its index</li>
-						<li>a <kbd>next</kbd> button</li>
-						<li>a <kbd>table of contents</kbd> to reach a slide through its title</li>
-						<li>the index (number of the current slide and total of slides)</li>
-						<li>a <kbd>configuration</kbd> button</li>
+						<li>a <kbd>previous</kbd> button;</li>
+						<li>a <kbd>selection list</kbd>: select the number of the slide you want to reach;</li>
+						<li>a <kbd>next</kbd> button;</li>
+						<li>a <kbd>table of contents</kbd>: reach a slide through its title;</li>
+						<li>the index (number of the current slide and total of slides);</li>
+						<li>a <kbd>configuration</kbd> button.</li>
 					</ol>
 				</section>
 
@@ -116,8 +116,14 @@
 						<li><kbd>End</kbd> Last slide</li>
 						<li><kbd>ALT + 0 (zero)</kbd> Table of contents</li>
 					</ul>
-					<p class="small">To go to the next slide with Jaws : ignore the next keystroke (using <kbd>INSERT</kbd> + <kbd>3</kbd>) then press <kbd>SPACE</kbd> to make the slideshow scroll.</p>
+					<p class="small">To go to the next slide with Jaws: ignore the next keystroke (using <kbd>INSERT</kbd> + <kbd>3</kbd>) then press <kbd>SPACE</kbd> to make the slideshow scroll.</p>
 					<p class="small">With NVDA, ignoring the next key is not necessary, the SPACE keystroke works.</p>
+				</section>
+
+				<section class="slide">
+					<h2>Remote navigation</h2>
+					<p>You can navigate in the slideshow with a remote.</p>
+					<p>Use the equivalent of <kbd>LEFT ARROW</kbd> and <kbd>RIGHT ARROW</kbd>.</p>
 				</section>
 		
 				<section class="slide">
@@ -125,9 +131,9 @@
 					<p>The available effects can be set in the configuration panel.</p>
 					<h3>To create your own effect:</h3>
 					<ol>
-						<li>Create a <code>class</code>, for example <code>.my-effect</code></li>
-						<li>In the <code>AccesSlide.js</code> file, create an entry in the <code>config</code> object (see the instructions in the file at the <code>Effects</code> section)</li>
-						<li>In the language file: create an entry for the tag's effect. Warning: the entry in the language file must have the same name than the <code>config</code> object</li>
+						<li>Create a <code>class</code>, for example <code>.my-effect</code>.</li>
+						<li>In the <code>AccesSlide.js</code> file, create an entry in the <code>config</code> object (see the instructions in the file at the <code>Effects</code> section).</li>
+						<li>In the language file: create an entry for the tag's effect. Warning: the entry in the language file must have the same name than the <code>config</code> object.</li>
 					</ol>
 					<p>The new effect will be automatically added to the list of effects in the configuration panel.</p>
 				</section>
@@ -136,8 +142,8 @@
 					<h2>CSS</h2>
 					<p>2 CSS files are necessary:</p>
 					<ul>
-						<li><code>css/style.css</code> : general properties of the slideshow</li>
-						<li><code>css/themes/default.css</code> : theme</li>
+						<li><code>css/style.css</code> general properties of the slideshow</li>
+						<li><code>css/themes/default.css</code> theme</li>
 					</ul>
 				</section>	
 
@@ -167,7 +173,7 @@
 					<h2>Automation with Grunt</h2>
 					<p>A minimal grunt configuration is also available for CSS compilation. 4 modules are configured in <code>Gruntfile.js</code>: </p>
 					<ul>
-						<li><a href="https://www.npmjs.com/package/grunt-myth">grunt-myth</a> : to compile CSS</li>
+						<li><a href="https://www.npmjs.com/package/grunt-myth">grunt-myth</a>: to compile CSS</li>
 						<li><a href="https://www.npmjs.com/package/grunt-contrib-cssmin">grunt-contrib-cssmin</a>: to minify CSS</li>
 						<li><a href="https://www.npmjs.com/package/grunt-combine-media-queries">grunt-combine-media-queries</a>: to combine media queries</li>
 						<li><a href="https://www.npmjs.com/package/grunt-contrib-watch">grunt-contrib-watch</a></li>
@@ -178,7 +184,7 @@
 					<h2>Customizing the interface</h2>
 					<div class="col-left">
 					<p>Icons (toolbar, configuration panel) are generated thanks to <a href="http://fortawesome.github.io/Font-Awesome/">fontawesome</a>.</p>
-					<p>If the font is not loading, images in the <code>img</code> folder are taking over. This fallback is provided by the <a href="https://github.com/filamentgroup/a-font-garde">a font garde</a> script from the Filament Group.</p>
+					<p>If the font is not loading, images in the <code>img</code> folder take over. This fallback is provided by the <a href="https://github.com/filamentgroup/a-font-garde">a font garde</a> script from the Filament Group.</p>
 					</div>
 					<div class="col-left">
 					<p>AccesSlide CSS files don't include the entire fontawesome library. To edit an icon, check the <a href="http://fortawesome.github.io/Font-Awesome/icons/">fontawesome documentation</a> and edit the AccesSlide CSS file with the required code.</p>
@@ -254,17 +260,17 @@
 		
 				<section class="slide">
 					<h2>Accessibility parameters</h2>
-					<p>You will find these parameters in the configuration panel. The parameters are persistent (use of <code>cookies</code> or of <code>localStorage</code> when possible). Use the <kbd>default</kbd> button to go back to the default configuration.</p>
+					<p>You will find these parameters in the configuration panel. The parameters are persistent (use of <code>cookies</code> or of <code>localStorage</code> when possible). Use the <kbd>Default</kbd> button to go back to the default configuration.</p>
 					<ul>
-						<li><code>Slide number</code> Read the number of the slides.</li>
-						<li><code>Hidden texts</code> Beep when a hidden text appears.</li>
-						<li><code>Slide</code> Beep when a slide is displayed.</li>
+						<li><code>Slide number</code> Read the slide number when displayed.</li>
+						<li><code>Hidden content</code> Beep when a hidden content appears.</li>
+						<li><code>Slide</code> Beep when displaying a slide.</li>
 						<li><code>First slide</code> Beep at the first slide.</li>
 						<li><code>Last slide</code> Beep at the last slide.</li>
-						<li><code>Title</code> Read the title of the current slide.</li>
-						<li><code>Window title</code> Update the title of the window during the display of the current slide.</li>
-						<li><code>Next button</code> Place the focus on the "Next" button during the slideshow loading </li>
-						<li><code>Click</code> Disable the click allowing to go to the next slide.</li>
+						<li><code>Heading</code> Read the heading of the current slide.</li>
+						<li><code>Window heading</code> Update the window heading when a slide is displayed.</li>
+						<li><code>Next button</code> Place the focus on the “Next” button when the slideshow is loading.</li>
+						<li><code>Click</code> Remove the click action (and the space bar) to display the next slide.</li>
 					</ul>
 				</section>
 
@@ -273,8 +279,8 @@
 				<div class="discT">
 						<ul id="discUL" class="list-disc">
 							<li><button class="disc disc1" type="button" onClick="document.getElementById('audiotest1').play();">First slide</button></li>
-							<li><button class="disc disc1" type="button" onClick="document.getElementById('audiotest2').play();">Hidden texts</button></li>
-							<li><button class="disc disc1" type="button" onClick="document.getElementById('audiotest3').play();">Show slides</button></li>
+							<li><button class="disc disc1" type="button" onClick="document.getElementById('audiotest2').play();">Hidden content</button></li>
+							<li><button class="disc disc1" type="button" onClick="document.getElementById('audiotest3').play();">Slide display</button></li>
 							<li><button class="disc disc1" type="button" onClick="document.getElementById('audiotest4').play();">Last slide</button></li>
 						</ul>
 						<div style="display:none">
@@ -301,8 +307,8 @@
 				<section class="slide">
 					<h2>Other parameters</h2>
 					<ul>
-						<li><code>Table of contents</code>: Chose the behavior of the table of contents (modal or modeless). Slides are resized if the table of contents is modeless.</li>
-						<li><code>Outline view</code>: Linearize the slideshow</li>
+						<li><code>Table of contents</code> Chose the behavior of the table of contents (modal or modeless). Slides are resized if the table of contents is modeless.</li>
+						<li><code>Outline view</code> Linearize the slideshow.</li>
 					</ul>
 					<p>Configure these parameters in the configuration panel.</p>
 				</section>
@@ -319,12 +325,12 @@
 
 				<section class="slide">
 					<h2>JavaScript</h2>
-					<p>You can use your own <code>scripts</code> in the <code>HTML</code> page or in the <code>slide.js</code> file.</p>
+					<p>You can use your own <code>scripts</code> in the <code>html</code> page or in the <code>slide.js</code> file.</p>
 				</section>
 
 				<section class="slide">
 					<h2>Outline view</h2>
-					<p>The outline view enables you to display the slideshow linearly, allowing you to prepare and check the content of your presentation more quickly.</p>
+					<p>The outline view displays the slideshow linearly, allowing you to prepare and check the content of your presentation more quickly.</p>
 					<p>Use the <code>configuration panel</code> to activate the outline view.</p>
 					<p>The <code>CSS</code> styling of the slides is kept, but the effects aren't. The pagination and markers are there to help visualizing the content of each slide.</p>
 					<div class="Cmasque">
@@ -343,9 +349,9 @@
 					<h2>Create a language file</h2>
 						<ol>
 							<li>Open the language file with a text editor</li>
-							<li>Edit the buttons labels <code>label</code>, image alternatives <code>alt</code>, options values <code>value</code> of the effects list, buttons or windows titles <code>title</code> and help messages <code>help</code>.
+							<li>Edit the buttons labels <code>label</code>, image alternatives <code>alt</code>, options values <code>value</code> of the effects list, buttons or windows titles <code>title</code> and help messages <code>help</code>
 							</li>
-							<li>Save your language file using the filename <code>lang_[language code].js</code>.
+							<li>Save your language file using the filename <code>lang_[language code].js</code>
 						</ol>
 				</section>
 

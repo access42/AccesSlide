@@ -115,7 +115,7 @@ var lang={
 	},
 	// Setting navbar button and select
 	// Ndxon = expression "on" in "1 on 4" for vocalization numbers slide 
-	// Warning : génerally title and alt are identical
+	// Warning : generally title and alt are identical
 	Bprev: {
 		title: 'Title of previous button',
 		alt: 'Alt of previous button'
