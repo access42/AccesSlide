@@ -3,32 +3,32 @@ var lang={
 	//vocalize slide number on total (1 on 4 for example)
 	VocalizeNdiapo: { 
 		label: 'Slide number', 
-		help: 'Vocalise slide numbers when displayed' 
+		help: 'Read the slide number when displayed' 
 	} ,
 	//Play a sound (beep) when displaying hidden text
 	SoundTxt: { 
 		label: 'Hidden content', 
-		help: 'Broadcast a beep when displaying hidden content' 
+		help: 'Beep when a hidden content appears' 
 	},
 	//Play a sound (beep) when displaying a slide
 	SoundSlide: { 
 		label: 'Slide', 
-		help: 'Broadcast a beep when displaying a slide'
+		help: 'Beep when displaying a slide'
 	},
 	//Play a sound (beep) when displaying first slide
 	SoundSlide1: { 
-		label: 'First Slide', 
-		help: 'Broadcast a beep when displaying first slide'
+		label: 'First slide', 
+		help: 'Beep when displaying the first slide'
 	},
 	//Play a sound (beep) when displaying last slide
 	SoundSlideEnd: { 
-		label: 'Last Slide', 
-		help: 'Broadcast a beep when displaying last slide'  
+		label: 'Last slide', 
+		help: 'Beep when displaying the last slide'  
 	},
 	//Vocalize the heading of the current slide
 	VocalizeTitle: { 
 		label: 'Heading', 
-		help: 'Vocalize the heading of the current slide'
+		help: 'Read the heading of the current slide'
 	},
 	//Update the window heading
 	UpWindowTitle: { 
@@ -38,13 +38,13 @@ var lang={
 	//Skip to the "next" button on slideshow onload
 	GotoBnext: { 
 		label: 'Next button', 
-		help: 'Gives the focus to the next button when the slideshow is onload' 
+		help: 'Place the focus to the “Next” button when the slideshow is loading' 
 	},
 	//Deactivate click button function to go to next slide
 	//Warning : deactivate spacebar function too
 	Noclick:  { 
 		label: 'Click', 
-		help: 'Removes the click action (and the space bar) to display the next slide.'
+		help: 'Remove the click action (and the space bar) to display the next slide.'
 	},
 	/** Slideshow parameters **/
 	// Display summary as modal window
@@ -59,7 +59,7 @@ var lang={
 	},
 	// Switch ModePlan=1 for Linear Layout
 	ModePlan: {
-		label: 'Linear layout', 
+		label: 'Outline view', 
 		help: 'Use the linear layout to display the slides in linear succession'
 	},
 	/** Effects **/
