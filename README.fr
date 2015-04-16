@@ -4,6 +4,7 @@ AccesSlide
 Un framework pour réaliser des présentations accessibles en HTML5-CSS3-JS.
 
 # Structure
+
 Les diapos s'insèrent dans l'élément `main` avec des éléments `section` associés à une classe `slide`.
 
 La première diapositive a une classe complémentaire `couv`. La dernière, une classe `end`.
