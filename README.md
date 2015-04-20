@@ -57,7 +57,7 @@ The available effects can be set in the configuration panel.
 Create your own effect:
 
 1.  Create a `class`, for example `.my-effect`.
-2.  In the `[AccesSlide.js](AccesSlide.js)` file, create an entry in the `config` object (see the instructions in the file at the `Effects` section).
+2.  In the [AccesSlide.js](AccesSlide.js) file, create an entry in the `config` object (see the instructions in the file at the `Effects` section).
 3.  In the language file: create an entry for the tag's effect. Warning: the entry in the language file must have the same name than the `config` object.
 
 # CSS
