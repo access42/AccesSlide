@@ -8,7 +8,7 @@ A HTML5-CSS3-JS framework for accessible keynotes.
 Put the slides in the `main` element with `section` elements associated with a `slide` class.
 `section` elements can be imbricated in `section` elements.
 
-The first and the last slide are using an extra class: respectively a `couv` and `end` class.
+The first and the last slide need an extra class: respectively a `couv` and `end` class.
 
 ## Short example of structure
 	<section class="slide">
@@ -84,7 +84,7 @@ Compiled files are in the [css/themes](css/themes) folder for themes and in the 
 Every file is also available in a non-minified version. This lets you change or create your own CSS without using a post-processor.
 
 ## Automation with Grunt
-A minimal grunt configuration is also available for CSS compilation. 4 modules are configured in [Gruntfile.js](Gruntfile.js):
+A minimal Grunt configuration is also available for CSS compilation. 4 modules are configured in [Gruntfile.js](Gruntfile.js):
 
 *   [grunt-myth](https://www.npmjs.com/package/grunt-myth): to compile CSS;
 *   [grunt-contrib-cssmin](https://www.npmjs.com/package/grunt-contrib-cssmin): to minify CSS;
