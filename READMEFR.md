@@ -72,7 +72,7 @@ Plusieurs thèmes sont livrés avec AccesSlide dans le dossier `css/themes`.
 ## Post-processeur
 Les fichiers CSS sont générés à l'aide du post-processeur [Myth](http://www.myth.io/).
 
-Les fichiers sources sont placés dans le dossier [css/source/](css/source/)  et dans [css/source/themes](css/source/themes) pour les thèmes.
+Les fichiers sources sont placés dans le dossier [css/sources/](css/sources/)  et dans [css/sources/themes](css/sources/themes) pour les thèmes.
 
 Les fichiers sont compilés dans le dossier [css/themes](css/themes) pour les thèmes, et [css/](css/) pour la mise en forme générale.
 
