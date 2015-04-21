@@ -4,6 +4,7 @@ AccesSlide
 Un framework pour réaliser des présentations accessibles en HTML5-CSS3-JS.
 
 # Structure
+
 Les diapos s'insèrent dans l'élément `main` avec des éléments `section` associés à une classe `slide`.
 
 La première diapositive a une classe complémentaire `couv`. La dernière, une classe `end`.
@@ -52,7 +53,7 @@ Les effets disponibles se paramètrent via le panneau de configuration.
 Pour créer un effet :
 
 1. créer une classe CSS, par exemple `.mon-effet` ;
-2. créer une entrée dans l'objet `config` du fichier AccesSlide.js (voir l'exemple dans le fichier) ;
+2. créer une entrée dans l'objet `config` du fichier [AccesSlide.js](AccesSlide.js) (voir l'exemple dans le fichier) ;
 3. créer une entrée dans le fichier de lang pour l'étiquette de l'effet. Attention l'entrée doit avoir le même nom que celle créé dans l'objet \`config.
 
 Vous pouvez animer un volet qui se superpose à la diapo ou la diapo elle-même.
@@ -60,8 +61,8 @@ Vous pouvez animer un volet qui se superpose à la diapo ou la diapo elle-même.
 # CSS
 2 fichiers CSS sont nécessaires :
 
-- `css/style.css` : propriétés générales du diaporama;
-- `css/themes/default.css` : thème.
+- [css/style.css](css/style.css) : propriétés générales du diaporama;
+- [css/themes/default.css](css/themes/default.css) : thème.
 
 Plusieurs thèmes sont livrés avec AccesSlide dans le dossier `css/themes`.
 
@@ -71,14 +72,14 @@ Plusieurs thèmes sont livrés avec AccesSlide dans le dossier `css/themes`.
 ## Post-processeur
 Les fichiers CSS sont générés à l'aide du post-processeur [Myth](http://www.myth.io/).
 
-Les fichiers sources sont placés dans le dossier `css/sources` et dans `css/sources/themes` pour les thèmes.
+Les fichiers sources sont placés dans le dossier [css/source/](css/source/)  et dans [css/source/themes](css/source/themes) pour les thèmes.
 
-Les fichiers sont compilés dans le dossier `css/themes` pour les thèmes, et `css/` pour la mise en forme générale.
+Les fichiers sont compilés dans le dossier [css/themes](css/themes) pour les thèmes, et [css/](css/) pour la mise en forme générale.
 
 Tous les fichiers sont également proposés dans une version non minifiée pour vous permettre de modifier ou créer vos propres feuilles CSS sans passer par un post-processeur.
 
 ## Automatisation avec Grunt
-Une configuration minimale Grunt est à votre disposition également pour la compilation des fichiers css. Les 4 modules configurés dans `Gruntfile.js` :
+Une configuration minimale Grunt est à votre disposition également pour la compilation des fichiers css. Les 4 modules configurés dans [Gruntfile.js](Gruntfile.js) :
 
 - grunt-myth : pour compiler au format CSS ;
 - grunt-contrib-cssmin : pour minifier le css ;
@@ -89,7 +90,7 @@ Une configuration minimale Grunt est à votre disposition également pour la com
 La mise en forme est réalisée pour s'adapter à la taille de la police et la taille de la fenêtre.
 
 ## Impression
-Une feuille `print.css` permet une mise en page lors de l'impression via le navigateur (`Ctrl` + `p`).
+Une feuille [print.css](css/print.css) permet une mise en page lors de l'impression via le navigateur (`Ctrl` + `p`).
 
 L'impression embarque certains des styles du thème choisi (propriété `all` du css du thème).
 
@@ -102,7 +103,7 @@ Pour qu'un élément, ou une section entière, n'apparaisse pas lors de l'impres
 # Personnaliser l'interface
 Les icônes (barre d'outils, configuration, etc.) sont générées grâce à <a href="http://fortawesome.github.io/Font-Awesome/">fontawesome</a>.
 
-Le fallback en cas de non chargement de la police est permis grâce au script <a href="https://github.com/filamentgroup/a-font-garde">a font garde</a> de Filament Group. Ce sont les images du dossier `img` qui prennent le relais en cas de non chargement.
+Le fallback en cas de non chargement de la police est permis grâce au script <a href="https://github.com/filamentgroup/a-font-garde">a font garde</a> de Filament Group. Ce sont les images du dossier [img](img/) qui prennent le relais en cas de non chargement.
 
 Les fichiers CSS d'AccesSlide n'embarquent pas entièremment la bibliothèque <span lang="en">fontawesome</span>. Pour modifier une icône, référez-vous à <a href="http://fortawesome.github.io/Font-Awesome/icons/">la documentation <span lang="en">fontawesome</span></a> et modifiez le fichier CSS d'AccesSlide avec le code voulu.
 
@@ -127,7 +128,7 @@ Ces paramètres sont configurables via le panneau de configuration. Les paramèt
 Ces paramètres se configurent via le panneau de configuration.
 
 # Javascript
-Vous pouvez utiliser vos propres scripts dans la page HTML ou via le fichier `slide.js`
+Vous pouvez utiliser vos propres scripts dans la page HTML ou via le fichier slide.js](slide.js).
 
 # Mode plan
 Le mode plan vous permet d'afficher le diaporama sous la forme d'un contenu linéarisé, ce qui permet un travail plus rapide pour la vérification et la préparation des contenus.
@@ -138,7 +139,7 @@ Le mode plan conserve les styles CSS des diapos mais pas les effets.
 
 # Localisation
 
-Les éléments de l'interface peuvent être traduits dans un fichier de langue (dossier `lang`).
+Les éléments de l'interface peuvent être traduits dans un fichier de langue (dossier [lang](lang/)).
 
 Pour utiliser un fichier de langue, modifiez la référence au fichier dans le `head` de la page, par exemple `<script type="text/javascript" src="lang/lang_fr.js"></script>` pour le fichier français.
 
