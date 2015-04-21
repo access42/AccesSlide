@@ -135,7 +135,7 @@ You will find these parameters in the configuration panel. The parameters are pe
 Configure these parameters in the configuration panel.
 
 # JavaScript
-You can use your own scripts in the html page or in the [slide.js](slide.js) file.
+You can use your own scripts in the html page or in the [slide.js](en/slide.js) file.
 
 # Outline view
 
