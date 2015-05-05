@@ -364,7 +364,7 @@ h6 {
 }
 
 .related a img {
-	position: related;
+	position: relative;
 	margin-top: -4px;
 }
 
