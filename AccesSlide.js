@@ -444,7 +444,7 @@ window.onload = function() {
 	document.addEventListener( 'keydown', function( e ) {
 			if ( key( e ) == 248 ) { OpenToc(); }
 			if( config.ModePlan.val === 0 ){
-				if ( key( e ) === 32 ) { GotoNext(); e.preventDefault(); }
+				if ( key( e ) === 32 && config.Noclick.val === 0 ) { GotoNext(); e.preventDefault(); }
 				if ( key( e ) === 39 || key( e ) === 34 ) { GotoNext(); e.preventDefault(); }
 				if ( key( e ) === 37 || key( e ) === 33 || key( e ) == 132 ) { GotoPrev(); e.preventDefault(); }
 				if ( key( e ) === 36 ) { current = 0; GotoSlide(); e.preventDefault(); }
